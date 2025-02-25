@@ -1,0 +1,573 @@
+
+**** 02/23/25 17:35:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_hold_circuit.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3601\tlv3601.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5045\REF5045.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\ADG1236\adg1236.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\THS3491\ths3491.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD25404Q3\CSD25404Q3.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD17573Q5B\CSD17573Q5B.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3603\tlv3603.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5050\REF5050.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5010_PSPICE_AIO\REF5010.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\sbomao2c\OPAx188.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\slpm140b\CSD17577Q5A.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5025_PSPICE_AIO\REF5025.LIB" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 500n 0 
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0u
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 200
+.OPTIONS RELTOL= 0.003
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HOLD_CIRCUIT
+V_V1         VDD 0 5Vdc
+V_V2         VCC 0 12Vdc
+V_V3         0 VSS 12Vdc
+C_C1         0 N07274  1u  TC=0,0 
+C_C2         0 VDD  10u  TC=0,0 
+C_C3         0 N09686  20u  TC=0,0 
+V_V4         0 VEE 5Vdc
+X_U3         VDD N07205 0 N07274 N09686 REF5045
+C_C4         0 N50140  1n  TC=0,0 
+X_U4         N09686 N50140 VDD 0 N50288 0 TLV3603
+D_D1         N50288 N50140 MBRA210LT3 
+
+**** RESUMING sim_hold_circuit.cir ****
+.END
+
+**** 02/23/25 17:35:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MBRA210LT3      X_U3.DVN        X_U3.DIN        X_U3.DD         
+          IS    2.847820E-06  100.000000E-18   10.000000E-15   10.000000E-15 
+           N     .818653                                                     
+          BV   10                                                            
+         IBV  170.000000E-06                                                 
+          RS     .01                                                         
+         CJO    1.790950E-09                                                 
+          VJ     .4                                                          
+           M     .453057                                                     
+          EG     .672315                                                     
+         XTI     .5                                                          
+          KF                  105.000000E-18                                 
+
+
+               X_U3.DL         X_U4.X_DESD2.model22 
+          IS    9.500000E-12   10.000000E-15 
+           N    1.55                         
+          BV                  100            
+          RS                    5            
+         XTI    1.5                          
+
+
+               X_U4.X_DESD3.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD4.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD5.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD6.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD7.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD8.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+**** 02/23/25 17:35:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.Q          X_U3.QA         X_U3.QP         
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS  100.000000E-18   14.500000E-18  100.000000E-18 
+          BF  100             100             100            
+          NF    1               1               1            
+          BR    1               1               1            
+          NR    1               1               1            
+         ISS    0               0               0            
+          RE    0               0               0            
+          RC    0               0               0            
+         CJE    0               0               0            
+         VJE     .75             .75             .75         
+         CJC    0               0               0            
+         VJC     .75             .75             .75         
+         MJC     .33             .33             .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 02/23/25 17:35:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.JC         
+               NJF             
+         VTO   -2            
+        BETA  100.000000E-06 
+          IS    1.000000E-18 
+
+
+**** 02/23/25 17:35:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.POUT       X_U3.NOUT       X_U3.PIN        X_U3.NIN        
+               PMOS            NMOS            PMOS            NMOS            
+       LEVEL    1               1               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO    -.7              .7             -.7              .7          
+          KP   60.000000E-06   60.000000E-06  200.000000E-06  200.000000E-06 
+       GAMMA    0               0               0               0            
+         PHI     .6              .6              .6              .6          
+      LAMBDA    0               0               0               0            
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0               0            
+          PB     .8              .8              .8              .8          
+        PBSW     .8              .8              .8              .8          
+          CJ    0               0               0               0            
+        CJSW    0               0               0               0            
+        CGSO    0               0               0               0            
+        CGDO    0               0               0               0            
+        CGBO    0               0               0               0            
+         TOX    0               0               0               0            
+          XJ    0               0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1               1            
+         VFB    0               0               0               0            
+        LETA    0               0               0               0            
+        WETA    0               0               0               0            
+          U0    0               0               0               0            
+        TEMP    0               0               0               0            
+         VDD    5               5               5               5            
+       XPART    0               0               0               0            
+
+
+               X_U3.NSW        X_U3.HVP        X_U3.HVN        
+               NMOS            PMOS            NMOS            
+       LEVEL    1               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO     .7             -.7              .7          
+          KP  200.000000E-06    2.000000E-06    2.000000E-06 
+       GAMMA    0               0               0            
+         PHI     .6              .6              .6          
+      LAMBDA    0               0               0            
+          IS    1.000000E-18   10.000000E-15   10.000000E-15 
+          JS    0               0               0            
+          PB     .8              .8              .8          
+        PBSW     .8              .8              .8          
+          CJ    0               0               0            
+        CJSW    0               0               0            
+        CGSO    0               0               0            
+        CGDO    0               0               0            
+        CGBO    0               0               0            
+         TOX    0               0               0            
+          XJ    0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1            
+         VFB    0               0               0            
+        LETA    0               0               0            
+        WETA    0               0               0            
+          U0    0               0               0            
+        TEMP    0               0               0            
+         VDD    5               5               5            
+       XPART    0               0               0            
+
+
+**** 02/23/25 17:35:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U4.X_U5.X_SMID._SMID 
+         RON    1            
+        ROFF    1.000000E+12 
+         VON    0            
+        VOFF    1            
+
+
+               X_U4.X_U5.X_SHIZ._SHIZ 
+         RON    1            
+        ROFF    1.000000E+12 
+         VON    0            
+        VOFF    1            
+
+
+               X_U4.X_U5.X_SVOH._SVOH 
+         RON    1            
+        ROFF    1.000000E+12 
+         VON    1            
+        VOFF    0            
+
+
+               X_U4.X_U5.X_SVOL._SVOL 
+         RON    1            
+        ROFF    1.000000E+12 
+         VON    0            
+        VOFF    1            
+
+
+Starting pseudo-transient algorithm.
+
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
+
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)     .1177  (  VDD)     .0490  (  VEE)    -.0490  (  VSS)    -.1177      
+
+(N07205)    -.0076 (N07274)-148.1E-15 (N09686)-10.82E-09 (N50140) 1.603E-06     
+
+(N50288) 14.07E-09 (X_U3.7) 191.4E-09 (X_U3.8) 192.1E-18 (X_U3.9)    0.0000     
+
+(X_U3.10) 481.1E-06                   (X_U3.11) 481.1E-06                       
+
+(X_U3.12) 481.1E-06                   (X_U3.13)-5.957E-21                       
+
+(X_U3.14) 481.1E-06                   (X_U3.15) 481.1E-06                       
+
+(X_U3.16)     .0490                   (X_U3.17)-93.43E-21                       
+
+(X_U3.18) 308.0E-09                   (X_U3.19) 264.1E-09                       
+
+(X_U3.20) 481.1E-06                   (X_U3.21) 481.1E-06                       
+
+(X_U3.22) 39.51E-15                   (X_U3.23)-10.82E-09                       
+
+(X_U3.24)     .4758                   (X_U3.25)     .4758                       
+
+(X_U3.26)     .1887                   (X_U3.27)     .1887                       
+
+(X_U3.28)-2.983E-09                   (X_U3.29)-2.983E-09                       
+
+(X_U3.30) 5.178E-09                   (X_U3.31) 2.041E-12                       
+
+(X_U3.32) 89.32E-12                   (X_U3.33) 4.719E-06                       
+
+(X_U3.34)    0.0000                   (X_U3.35) 105.6E-15                       
+
+(X_U3.36) 10.76E-12                   (X_U3.37) 500.7E-12                       
+
+(X_U3.38)    0.0000                   (X_U3.39) 11.11E-18                       
+
+(X_U3.40) 2.041E-12                   (X_U3.41)-29.26E-12                       
+
+(X_U3.42) 50.79E-12                   (X_U3.43) 2.041E-12                       
+
+(X_U3.44) 2.044E-12                   (X_U3.45) 2.359E-06                       
+
+(X_U3.46) 308.0E-09                   (X_U3.47) 308.0E-09                       
+
+(X_U3.48)-11.23E-09                   (X_U3.49) 468.4E-09                       
+
+(X_U3.50)-10.36E-09                   (X_U3.51) 480.6E-06                       
+
+(X_U3.52)    -.0044                   (X_U3.53) 1.364E-12                       
+
+(X_U3.54) 5.178E-09                   (X_U3.55) 1.364E-12                       
+
+(X_U3.56)-2.983E-09                   (X_U3.57)     .0049                       
+
+(X_U3.58) 480.6E-06                   (X_U3.59) 468.4E-09                       
+
+(X_U3.60) 2.359E-06                   (X_U3.61)-106.1E-12                       
+
+(X_U3.62) 480.9E-06                   (X_U3.63) 481.1E-06                       
+
+(X_U3.64) 5.178E-09                   (X_U3.65) 320.8E-06                       
+
+(X_U3.66) 320.8E-06                   (X_U3.67) 481.1E-06                       
+
+(X_U3.68) 320.8E-06                   (X_U3.69) 240.5E-06                       
+
+(X_U3.70)    -.0093                   (X_U3.71) 481.1E-06                       
+
+(X_U3.72) 481.1E-06                   (X_U3.73)    -.7212                       
+
+(X_U3.74) 2.359E-06                   (X_U3.75)-10.41E-09                       
+
+(X_U3.76)-11.23E-09                   (X_U3.77) 2.359E-06                       
+
+(X_U3.78) 2.359E-06                   (X_U3.79)    -.0018                       
+
+(X_U3.80)    -.0018                   (X_U3.81) 47.75E-06                       
+
+(X_U3.82) 433.3E-06                   (X_U3.83)     .5341                       
+
+(X_U3.84)     .5276                   (X_U3.85)     .5242                       
+
+(X_U3.86) 9.106E-09                   (X_U3.87) 10.33E-09                       
+
+(X_U3.88)     .0169                   (X_U3.89)     .0175                       
+
+(X_U3.90) 216.4E-06                   (X_U3.91)     .0096                       
+
+(X_U3.92)     .0170                   (X_U3.93)     .0175                       
+
+(X_U3.94) 108.1E-06                   (X_U3.95)     .0098                       
+
+(X_U3.96)     .0098                   (X_U3.97)    0.0000                       
+
+(X_U3.98)-10.82E-09                   (X_U3.99)     .6309                       
+
+(X_U3.100)     .6316                  (X_U3.101)     .6513                      
+
+(X_U3.102)     .0049                  (X_U3.103)     .6072                      
+
+(X_U3.104)     .5272                  (X_U3.105)     .6316                      
+
+(X_U3.106)     .0412                  (X_U3.107)     .6489                      
+
+(X_U3.108)     .0050                  (X_U3.109)     .6489                      
+
+(X_U3.110)     .0202                  (X_U3.111)     .6513                      
+
+(X_U3.112)     .0021                  (X_U3.113)     .0203                      
+
+(X_U3.114)     .0064                  (X_U3.115)     .0668                      
+
+(X_U3.116) 107.4E-06                  (X_U3.117)     .0011                      
+
+(X_U3.118)   11.7600                  (X_U3.119)     .0011                      
+
+(X_U3.120)     .0011                  (X_U3.121)   11.7650                      
+
+(X_U3.122)     .5355                  (X_U3.123)     .5291                      
+
+(X_U3.124)     .5325                  (X_U3.125)     .5261                      
+
+(X_U3.126)     .5223                  (X_U3.127)    -.0076                      
+
+(X_U4.LATCH)    0.0000                (X_U4.VHYST)    0.0000                    
+
+(X_U4.N21103) 4.672E-06               (X_U4.N21168)    0.0000                   
+
+(X_U4.N21237)    0.0000               (X_U4.IN+BUFF)-106.1E-12                  
+
+(X_U4.IN-BUFF) 15.72E-09              (X_U4.N785573) 4.904E-06                  
+
+(X_U4.N786723) 96.21E-06              (X_U4.N813845)    0.0000                  
+
+(X_U4.N840186) 481.1E-06              (X_U4.N843683)     .0490                  
+
+(X_U4.N849250)    0.0000              (X_U4.X_U3.VH)    0.0000                  
+
+(X_U4.X_U5.1V)     .0098              (X_U4.X_U7.1V)     .0098                  
+
+(X_U4.X_U3.OUT) 4.719E-06             (X_U4.X_U5.MID) 23.14E-09                 
+
+(X_U4.X_U9.VLE)    0.0000             (X_U4.V+_BUFFER) 481.1E-06                
+
+(X_U4.V-_BUFFER)    0.0000            (X_U4.X_U3.VMID) 2.359E-06                
+
+(X_U4.X_U2.N20155)     .0034          (X_U4.X_U2.N20415)    -.0029              
+
+(X_U4.X_U2.N20531)    0.0000          (X_U4.X_U2.N20539)    -.0029              
+
+(X_U4.X_U2.N20826)    0.0000          (X_U4.X_U2.N20833)    0.0000              
+
+(X_U4.X_U2.N20840)    0.0000          (X_U4.X_U3.INNNEW) 154.2E-12              
+
+(X_U4.X_U4.N03175) 2.336E-06          (X_U4.X_U5.X_U3.3) 384.8E-06              
+
+(X_U4.X_U5.X_U8.6)    0.0000          (X_U4.X_U7.N16973) 4.719E-06              
+
+(X_U4.X_U7.N20310)     .0235          (X_U4.X_U7.N20377)     .0540              
+
+(X_U4.X_U9.N00729)     .0123          (X_U4.X_U10.N11903) 481.1E-06             
+
+(X_U4.X_U10.N11909)    0.0000         (X_U4.X_U10.N11937)    0.0000             
+
+(X_U4.X_U10.N11943) 481.1E-06         (X_U4.X_U10.N12017)     .0490             
+
+(X_U4.X_U10.N12181)    0.0000         (X_U4.X_U10.N12289)    0.0000             
+
+(X_U4.X_U10.VLOGIC)     .0490         (X_U4.X_U10.X_U4.4)    0.0000             
+
+(X_U4.X_U10.X_U5.4)    0.0000         (X_U4.X_U10.X_U6.3)    0.0000             
+
+(X_U4.X_U2.N202710)     .0034         (X_U4.X_U2.X_U24.6)    0.0000             
+
+(X_U4.X_U5.N774212) 384.8E-06         (X_U4.X_U5.N774290)     .0392             
+
+(X_U4.X_U5.N778484) 14.07E-09         (X_U4.X_U5.N778496) 13.85E-09             
+
+(X_U4.X_U5.N789513) 96.21E-06         (X_U4.X_U5.N850209) 227.0E-12             
+
+(X_U4.X_U5.X_U10.4)    0.0000         (X_U4.X_U5.N8491902) 13.85E-09            
+
+(X_U4.X_U2.X_U1.OUT2)    0.0000       (X_U4.X_U5.X_U7.VMID) 2.359E-06           
+
+(X_U4.X_U7.X_U5.OUT2)    0.0000       (X_U4.X_U10.X_U2.OUT2) 481.1E-06          
+
+(X_U4.X_U10.X_U3.OUT2) 481.1E-06      (X_U4.X_U2.X_U21.OUT2)    0.0000          
+
+(X_U4.X_U2.X_U22.OUT2)    0.0000      (X_U4.X_U2.X_U23.OUT2)    0.0000          
+
+(X_U4.X_U7.X_U13.OUT1) 4.719E-06      (X_U4.X_U7.X_U15.OUT2) 96.21E-06          
+
+(X_U4.X_U5.CONTROL_HIZ)    0.0000     (X_U4.X_U5.CONTROL_MID)    0.0000         
+
+(X_U4.X_LATCH_DELAY.N06081)    0.0000 (X_U4.X_LATCH_DELAY.N059950)    0.0000    
+
+
+  These voltages failed to converge:
+
+    V(N50140)                 =    3.215uV  \    1.603uV
+    V(N50288)                 =    24.08mV  \    14.07nV
+    V(X_U4.X_U4.N03175)       =    23.07mV  \    2.336uV
+    V(X_U4.N813845)           =    23.07mV  \         0V
+    V(X_U4.N21103)            =    48.44mV  \    4.672uV
+    V(X_U4.X_U2.N202710)      =    51.99mV  \    3.424mV
+    V(X_U4.V+_BUFFER)         =    49.04mV  \   481.06uV
+    V(X_U4.X_U2.N20155)       =    51.99mV  \    3.424mV
+    V(X_U4.X_U5.N778484)      =    24.08mV  \    14.07nV
+    V(X_U4.X_U5.N778496)      =    23.69mV  \    13.85nV
+    V(X_U4.X_U5.N8491902)     =    23.69mV  \    13.85nV
+    V(X_U4.X_U5.N850209)      =   388.42uV  \   226.97pV
+    V(X_U4.X_U3.VMID)         =    24.52mV  \    2.359uV
+    V(X_U4.X_U3.INNNEW)       =    3.215uV  \   154.18pV
+    V(X_U4.IN-BUFF)           =    3.215uV  \    15.72nV
+    V(X_U4.X_U3.OUT)          =    49.04mV  \    4.719uV
+    V(X_U4.X_U5.MID)          =    24.52mV  \    23.14nV
+    V(X_U4.X_U5.X_U3.3)       =    39.24mV  \   384.85uV
+    V(X_U4.N840186)           =    48.95mV  \   481.06uV
+    V(X_U4.X_U5.N774212)      =    39.24mV  \   384.85uV
+    V(X_U4.X_U5.X_U7.VMID)    =    24.52mV  \    2.359uV
+    V(X_U4.N786723)           =     9.79mV  \    96.21uV
+    V(X_U4.X_U5.N789513)      =     9.81mV  \    96.21uV
+    V(X_U4.X_U7.N16973)       =    49.04mV  \    4.719uV
+    V(X_U4.X_U7.X_U15.OUT2)   =     9.81mV  \    96.21uV
+    V(X_U4.X_U7.X_U13.OUT1)   =    49.04mV  \    4.719uV
+    V(X_U4.X_U10.N11903)      =    49.04mV  \   481.06uV
+    V(X_U4.X_U10.X_U3.OUT2)   =    49.04mV  \   481.06uV
+    V(X_U4.X_U10.N11943)      =    48.95mV  \   481.06uV
+    V(X_U4.X_U10.X_U2.OUT2)   =    49.04mV  \   481.06uV
+
+  These supply currents failed to converge:
+
+    I(X_U4.X_U4.e.T_TPD.eA1)  =   507.44uA  \    46.72nA
+    I(X_U4.X_U4.e.T_TPD.eB1)  =  -507.48uA  \         0A
+    I(X_U4.X_U3.EOUT)         =  -604.31uA  \   -46.72nA
+    I(X_U4.X_U5.X_U7.EOUT)    =  -439.82uA  \   -9.070nA
+    I(X_U4.X_U7.X_U15.EOUT)   =   -19.39uA  \   -3.924pA
+    I(X_U4.X_U10.X_U3.EOUT)   =   -96.93uA  \   -19.62pA
+    I(X_U4.X_U10.X_U2.EOUT)   =   -96.93uA  \   -19.62pA
+    I(X_U4.X_U5.L_L1)         =    51.40uA  \    8.843nA
+    IA(X_U4.X_U4.T_TPD)       =   507.41uA  \    46.72nA
+    IB(X_U4.X_U4.T_TPD)       =  -507.41uA  \         0A
+
+  These devices failed to converge:
+    D_D1      X_U4.X_U5.X_U8.E1 X_U4.X_U5.X_U10.E1 X_U4.X_U7.X_U15.EOUT 
+    X_U4.X_U10.X_U3.EOUT X_U4.X_U10.X_U2.EOUT 
+
+**** Interrupt ****

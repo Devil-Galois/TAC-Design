@@ -1,0 +1,37 @@
+** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
+
+** Creating circuit file "sim_test.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\OPA388\OPAx388.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\LMP7721\LMP7721.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3601\tlv3601.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5045\REF5045.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\ADG1236\adg1236.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\THS3491\ths3491.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD25404Q3\CSD25404Q3.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD17573Q5B\CSD17573Q5B.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3603\tlv3603.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5050\REF5050.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5010_PSPICE_AIO\REF5010.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\sbomao2c\OPAx188.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\slpm140b\CSD17577Q5A.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5025_PSPICE_AIO\REF5025.LIB" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 4u 0 
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0u
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 200
+.OPTIONS RELTOL= 0.005
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

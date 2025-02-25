@@ -1,0 +1,17 @@
+* source HOLD_CIRCUIT
+V_V1         VDD 0 5Vdc
+V_V2         VCC 0 12Vdc
+V_V3         0 VSS 12Vdc
+C_C1         0 N07274  1u  TC=0,0 
+C_C2         0 VDD  10u  TC=0,0 
+C_C3         0 N09686  20u  TC=0,0 
+V_V4         0 VEE 5Vdc
+X_U3         VDD N07205 0 N07274 N09686 REF5045
+C_C4         0 N50140  1n  TC=0,0 
+X_U4         N09686 N50140 VDD 0 N50288 N51187 TLV3603
+X_D1         N51560 N50140 BAT54/PLP
+V_V5         N51560 0  
++PULSE 0 5 100n 100p 100p 400n 600n
+X_Q1         N51560 N52500 0 BFG425W/PLP
+R_R2         0 N52500  1k  
+R_R3         N52500 N50288  1k  

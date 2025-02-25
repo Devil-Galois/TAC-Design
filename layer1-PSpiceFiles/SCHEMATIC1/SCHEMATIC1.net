@@ -1,0 +1,6 @@
+* source LAYER1
+R_R1         N00100 VCC  2k TC=0,0 
+V_V1         N00187 0  
++PULSE 710mV 1V 100n 200p 200p 10n 200n
+V_V2         VCC 0 3.3Vdc
+X_Q1         N00100 N00187 0 BFP420/INF

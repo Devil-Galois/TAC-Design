@@ -1,0 +1,64 @@
+
+**** 02/19/25 16:32:37 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_layer1"  [ C:\Users\15062\Desktop\design\layer1-PSpiceFiles\SCHEMATIC1\sim_layer1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_layer1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000ns 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+$
+ERROR(ORPSIM-16058): Command ignored
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAYER1
+X_Q1         N00100 N00187 GND BFP420/INF
+R_R1         N00100 VCC  1k TC=0,0 
+V_V1         N00187 GND  
++PULSE 0 1 100n 100p 100p 5n 200n
+V_V2         VCC GND 5Vdc
+
+**** RESUMING sim_layer1.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N00100 is floating
+
+ERROR(ORPSIM-15142): Node VCC is floating
+
+ERROR(ORPSIM-15142): Node N00187 is floating
+
+ERROR(ORPSIM-15142): Node GND is floating
+
+ERROR(ORPSIM-15142): Node X_Q1.1 is floating
+
+ERROR(ORPSIM-15142): Node X_Q1.10 is floating
+
+ERROR(ORPSIM-15142): Node X_Q1.2 is floating
+
+ERROR(ORPSIM-15142): Node X_Q1.20 is floating
+
+ERROR(ORPSIM-15142): Node X_Q1.3 is floating
+
+ERROR(ORPSIM-15142): Node X_Q1.30 is floating
+

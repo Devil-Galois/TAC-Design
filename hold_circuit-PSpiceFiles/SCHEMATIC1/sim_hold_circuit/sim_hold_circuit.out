@@ -1,0 +1,611 @@
+
+**** 02/23/25 17:45:10 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_hold_circuit.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3601\tlv3601.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5045\REF5045.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\ADG1236\adg1236.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\THS3491\ths3491.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD25404Q3\CSD25404Q3.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD17573Q5B\CSD17573Q5B.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3603\tlv3603.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5050\REF5050.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5010_PSPICE_AIO\REF5010.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\sbomao2c\OPAx188.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\slpm140b\CSD17577Q5A.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5025_PSPICE_AIO\REF5025.LIB" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1u 0 
+.OPTIONS ADVCONV
+.OPTIONS ABSTOL= 1.0u
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 200
+.OPTIONS RELTOL= 0.01
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source HOLD_CIRCUIT
+V_V1         VDD 0 5Vdc
+V_V2         VCC 0 12Vdc
+V_V3         0 VSS 12Vdc
+C_C1         0 N07274  1u  TC=0,0 
+C_C2         0 VDD  10u  TC=0,0 
+C_C3         0 N09686  20u  TC=0,0 
+V_V4         0 VEE 5Vdc
+X_U3         VDD N07205 0 N07274 N09686 REF5045
+C_C4         0 N50140  1n  TC=0,0 
+X_U4         N09686 N50140 VDD 0 N50288 N51187 TLV3603
+X_D1         N51560 N50140 BAT54/PLP
+V_V5         N51560 0  
++PULSE 0 5 100n 100p 100p 400n 600n
+X_Q1         N51560 N52500 0 BFG425W/PLP
+R_R2         0 N52500  1k  
+R_R3         N52500 N50288  1k  
+
+**** RESUMING sim_hold_circuit.cir ****
+.END
+
+**** 02/23/25 17:45:10 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DVN        X_U3.DIN        X_U3.DD         X_U3.DL         
+          IS  100.000000E-18   10.000000E-15   10.000000E-15    9.500000E-12 
+           N                                                    1.55         
+         XTI                                                    1.5          
+          KF  105.000000E-18                                                 
+
+
+               X_D1.BAT54      X_U4.X_DESD2.model22 
+          IS  211.700000E-09   10.000000E-15 
+           N    1.016                        
+          BV   36             100            
+         IBV    1.196000E-06                 
+          RS    2.637           5            
+         CJO   11.140000E-12                 
+          VJ     .2013                       
+           M     .3868                       
+          FC    0                            
+          EG     .69                         
+         XTI    2                            
+
+
+               X_U4.X_DESD3.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD4.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD5.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD6.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD7.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+               X_U4.X_DESD8.model22 
+          IS   10.000000E-15 
+          BV  100            
+          RS    5            
+
+
+**** 02/23/25 17:45:10 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.Q          X_U3.QA         X_U3.QP         X_Q1.NPN        
+               NPN             NPN             PNP             NPN             
+       LEVEL    1               1               1               1            
+          IS  100.000000E-18   14.500000E-18  100.000000E-18   47.170000E-18 
+          BF  100             100             100             145            
+          NF    1               1               1                .9934       
+         VAF                                                   31.12         
+         IKF                                                     .304        
+         ISE                                                  300.200000E-15 
+          NE                                                    3            
+          BR    1               1               1              11.37         
+          NR    1               1               1                .985        
+         VAR                                                    1.874        
+         IKR                                                     .121        
+         ISC                                                  484.800000E-18 
+          NC                                                    1.546        
+         ISS    0               0               0               0            
+          RB                                                   14.41         
+         RBM                                                    6.175        
+          RE    0               0               0                .1779       
+          RC    0               0               0               1.78         
+         CJE    0               0               0             310.900000E-15 
+         VJE     .75             .75             .75             .9          
+         MJE                                                     .3456       
+         CJC    0               0               0             137.700000E-15 
+         VJC     .75             .75             .75             .5569       
+         MJC     .33             .33             .33             .2079       
+        XCJC    1               1               1                .5          
+         CJS    0               0               0             667.500000E-15 
+         VJS     .75             .75             .75             .4183       
+         MJS                                                     .2391       
+          FC                                                     .5501       
+          TF                                                    4.122000E-12 
+         XTF                                                   68.2          
+         VTF                                                    2.004        
+         ITF                                                    1.525        
+         XTB                                                    1.5          
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.42            2.2             2.42         
+           D     .87             .87             .52             .87         
+
+
+**** 02/23/25 17:45:10 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.JC         
+               NJF             
+         VTO   -2            
+        BETA  100.000000E-06 
+          IS    1.000000E-18 
+
+
+**** 02/23/25 17:45:10 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.POUT       X_U3.NOUT       X_U3.PIN        X_U3.NIN        
+               PMOS            NMOS            PMOS            NMOS            
+       LEVEL    1               1               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO    -.7              .7             -.7              .7          
+          KP   60.000000E-06   60.000000E-06  200.000000E-06  200.000000E-06 
+       GAMMA    0               0               0               0            
+         PHI     .6              .6              .6              .6          
+      LAMBDA    0               0               0               0            
+          IS   10.000000E-15   10.000000E-15   10.000000E-15   10.000000E-15 
+          JS    0               0               0               0            
+          PB     .8              .8              .8              .8          
+        PBSW     .8              .8              .8              .8          
+          CJ    0               0               0               0            
+        CJSW    0               0               0               0            
+        CGSO    0               0               0               0            
+        CGDO    0               0               0               0            
+        CGBO    0               0               0               0            
+         TOX    0               0               0               0            
+          XJ    0               0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1               1            
+         VFB    0               0               0               0            
+        LETA    0               0               0               0            
+        WETA    0               0               0               0            
+          U0    0               0               0               0            
+        TEMP    0               0               0               0            
+         VDD    5               5               5               5            
+       XPART    0               0               0               0            
+
+
+               X_U3.NSW        X_U3.HVP        X_U3.HVN        
+               NMOS            PMOS            NMOS            
+       LEVEL    1               1               1            
+           L  100.000000E-06  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06  100.000000E-06 
+         VTO     .7             -.7              .7          
+          KP  200.000000E-06    2.000000E-06    2.000000E-06 
+       GAMMA    0               0               0            
+         PHI     .6              .6              .6          
+      LAMBDA    0               0               0            
+          IS    1.000000E-18   10.000000E-15   10.000000E-15 
+          JS    0               0               0            
+          PB     .8              .8              .8          
+        PBSW     .8              .8              .8          
+          CJ    0               0               0            
+        CJSW    0               0               0            
+        CGSO    0               0               0            
+        CGDO    0               0               0            
+        CGBO    0               0               0            
+         TOX    0               0               0            
+          XJ    0               0               0            
+       UCRIT   10.000000E+03   10.000000E+03   10.000000E+03 
+      DIOMOD    1               1               1            
+         VFB    0               0               0            
+        LETA    0               0               0            
+        WETA    0               0               0            
+          U0    0               0               0            
+        TEMP    0               0               0            
+         VDD    5               5               5            
+       XPART    0               0               0            
+
+
+**** 02/23/25 17:45:10 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U4.X_U5.X_SMID._SMID 
+         RON    1            
+        ROFF    1.000000E+12 
+         VON    0            
+        VOFF    1            
+
+
+               X_U4.X_U5.X_SHIZ._SHIZ 
+         RON    1            
+        ROFF    1.000000E+12 
+         VON    0            
+        VOFF    1            
+
+
+               X_U4.X_U5.X_SVOH._SVOH 
+         RON    1            
+        ROFF    1.000000E+12 
+         VON    1            
+        VOFF    0            
+
+
+               X_U4.X_U5.X_SVOL._SVOL 
+         RON    1            
+        ROFF    1.000000E+12 
+         VON    0            
+        VOFF    1            
+
+
+**** 02/23/25 17:45:10 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   12.0000  (  VDD)    5.0000  (  VEE)   -5.0000  (  VSS)  -12.0000      
+
+(N07205)     .5750 (N07274)    1.2000 (N09686)    4.5023 (N50140)    -.0458     
+
+(N50288) 446.2E-12 (N51187)    1.2500 (N51560)    0.0000 (N52500) 223.1E-12     
+
+(X_Q1.4)    0.0000 (X_Q1.5) 223.1E-12 (X_Q1.6)    0.0000 (X_Q1.7)    0.0000     
+
+(X_Q1.8)    0.0000 (X_U3.7)     .5876 (X_U3.8) 32.89E-06 (X_U3.9)    0.0000     
+
+(X_U3.10)    2.7661                   (X_U3.11)    2.7665                       
+
+(X_U3.12)    2.7661                   (X_U3.13) 32.89E-06                       
+
+(X_U3.14)    4.9966                   (X_U3.15)    4.9966                       
+
+(X_U3.16)    4.9995                   (X_U3.17) 5.060E-06                       
+
+(X_U3.18)    2.4249                   (X_U3.19)    2.4249                       
+
+(X_U3.20)    5.0000                   (X_U3.21)    5.0000                       
+
+(X_U3.22) 6.000E-06                   (X_U3.23)    4.5023                       
+
+(X_U3.24)     .5955                   (X_U3.25)     .5955                       
+
+(X_U3.26)     .5546                   (X_U3.27)     .5546                       
+
+(X_U3.28)    1.2000                   (X_U3.29)    1.2000                       
+
+(X_U3.30)    1.2000                   (X_U3.31)    1.2000                       
+
+(X_U3.32)    1.2000                   (X_U3.33)    5.0000                       
+
+(X_U3.34)    0.0000                   (X_U3.35)    1.2000                       
+
+(X_U3.36)    1.2000                   (X_U3.37) 500.0E-06                       
+
+(X_U3.38)    0.0000                   (X_U3.39) 120.0E-06                       
+
+(X_U3.40)    1.2000                   (X_U3.41)    1.2000                       
+
+(X_U3.42)    1.2000                   (X_U3.43)    1.2000                       
+
+(X_U3.44)    1.2000                   (X_U3.45)    2.5000                       
+
+(X_U3.46)    2.4249                   (X_U3.47)    2.4249                       
+
+(X_U3.48)    4.5023                   (X_U3.49)     .7083                       
+
+(X_U3.50)    4.5051                   (X_U3.51)    4.2158                       
+
+(X_U3.52)    4.2909                   (X_U3.53)     .4100                       
+
+(X_U3.54)    1.2000                   (X_U3.55)     .4100                       
+
+(X_U3.56)    1.2000                   (X_U3.57)     .7091                       
+
+(X_U3.58)    4.2158                   (X_U3.59)     .7083                       
+
+(X_U3.60)    2.5000                   (X_U3.61)    4.5023                       
+
+(X_U3.62)    4.3397                   (X_U3.63)    5.0000                       
+
+(X_U3.64)    1.2000                   (X_U3.65)    2.8837                       
+
+(X_U3.66)    2.8837                   (X_U3.67)    5.0000                       
+
+(X_U3.68)    2.8837                   (X_U3.69)     .7039                       
+
+(X_U3.70)    4.0000                   (X_U3.71)    2.7665                       
+
+(X_U3.72)    2.7665                   (X_U3.73)    4.0809                       
+
+(X_U3.74)    2.5000                   (X_U3.75)    4.5023                       
+
+(X_U3.76)    4.5023                   (X_U3.77)    2.5000                       
+
+(X_U3.78)    2.5000                   (X_U3.79)    3.6276                       
+
+(X_U3.80)-74.19E+03                   (X_U3.81)     .7083                       
+
+(X_U3.82)    4.2158                   (X_U3.83)     .6551                       
+
+(X_U3.84) 99.53E-06                   (X_U3.85)    -.3499                       
+
+(X_U3.86)    1.2000                   (X_U3.87)    1.2000                       
+
+(X_U3.88) -322.0000                   (X_U3.89)    1.7800                       
+
+(X_U3.90)    5.0000                   (X_U3.91)    1.0000                       
+
+(X_U3.92) -322.0000                   (X_U3.93)    1.7800                       
+
+(X_U3.94)    5.0000                   (X_U3.95)    1.0000                       
+
+(X_U3.96)    1.0000                   (X_U3.97)    0.0000                       
+
+(X_U3.98)    4.5023                   (X_U3.99)     .7411                       
+
+(X_U3.100)     .7540                  (X_U3.101)    1.1624                      
+
+(X_U3.102)     .0534                  (X_U3.103)     .6826                      
+
+(X_U3.104)     .4567                  (X_U3.105)     .7541                      
+
+(X_U3.106)     .4373                  (X_U3.107)    1.1194                      
+
+(X_U3.108)     .0585                  (X_U3.109)    1.1194                      
+
+(X_U3.110)     .7680                  (X_U3.111)    1.1540                      
+
+(X_U3.112)     .0481                  (X_U3.113)     .7680                      
+
+(X_U3.114)    1.1624                  (X_U3.115)    7.3175                      
+
+(X_U3.116)    1.2001                  (X_U3.117) 1200.0000                      
+
+(X_U3.118) 1199.5000                  (X_U3.119) 1200.1000                      
+
+(X_U3.120) 1200.0000                  (X_U3.121) 1199.5000                      
+
+(X_U3.122)     .6551                  (X_U3.123)     .0051                      
+
+(X_U3.124)     .6551                  (X_U3.125) 99.54E-06                      
+
+(X_U3.126)    -.3870                  (X_U3.127)     .5750                      
+
+(X_U4.LATCH)    5.0000                (X_U4.VHYST)    0.0000                    
+
+(X_U4.N21103)    4.9505               (X_U4.N21168)    0.0000                   
+
+(X_U4.N21237)    0.0000               (X_U4.IN+BUFF)    4.5023                  
+
+(X_U4.IN-BUFF)    -.0458              (X_U4.N785573)    4.5028                  
+
+(X_U4.N786723)    0.0000              (X_U4.N813845)    2.4752                  
+
+(X_U4.N840186)    0.0000              (X_U4.N843683)    5.0000                  
+
+(X_U4.N849250)    5.0000              (X_U4.X_U3.VH)    0.0000                  
+
+(X_U4.X_U5.1V)    1.0000              (X_U4.X_U7.1V)    1.0000                  
+
+(X_U4.X_U3.OUT)    5.0000             (X_U4.X_U5.MID)    2.5000                 
+
+(X_U4.X_U9.VLE)    1.2500             (X_U4.V+_BUFFER)    5.0000                
+
+(X_U4.V-_BUFFER)    0.0000            (X_U4.X_U3.VMID)    2.5000                
+
+(X_U4.X_U2.N20155)    5.3000          (X_U4.X_U2.N20415)    -.3000              
+
+(X_U4.X_U2.N20531)    0.0000          (X_U4.X_U2.N20539)    -.3000              
+
+(X_U4.X_U2.N20826)    0.0000          (X_U4.X_U2.N20833)    0.0000              
+
+(X_U4.X_U2.N20840)    0.0000          (X_U4.X_U3.INNNEW)    -.0458              
+
+(X_U4.X_U4.N03175)    2.4752          (X_U4.X_U5.X_U3.3)    4.0000              
+
+(X_U4.X_U5.X_U8.6)    0.0000          (X_U4.X_U7.N16973)    5.0000              
+
+(X_U4.X_U7.N20310)    2.3990          (X_U4.X_U7.N20377)    5.5100              
+
+(X_U4.X_U9.N00729)    1.2500          (X_U4.X_U10.N11903)    5.0000             
+
+(X_U4.X_U10.N11909)    5.0000         (X_U4.X_U10.N11937)    5.0000             
+
+(X_U4.X_U10.N11943)    5.0000         (X_U4.X_U10.N12017)    5.0000             
+
+(X_U4.X_U10.N12181)    0.0000         (X_U4.X_U10.N12289)    0.0000             
+
+(X_U4.X_U10.VLOGIC)    5.0000         (X_U4.X_U10.X_U4.4)    5.0000             
+
+(X_U4.X_U10.X_U5.4)    0.0000         (X_U4.X_U10.X_U6.3)    5.0000             
+
+(X_U4.X_U2.N202710)    5.3000         (X_U4.X_U2.X_U24.6)    0.0000             
+
+(X_U4.X_U5.N774212)    4.0000         (X_U4.X_U5.N774290)    4.0000             
+
+(X_U4.X_U5.N778484) 446.2E-12         (X_U4.X_U5.N778496) 443.9E-12             
+
+(X_U4.X_U5.N789513)    1.0000         (X_U4.X_U5.N850209) 7.277E-12             
+
+(X_U4.X_U5.X_U10.4)    1.0000         (X_U4.X_U5.N8491902) 743.9E-12            
+
+(X_U4.X_U2.X_U1.OUT2)    0.0000       (X_U4.X_U5.X_U7.VMID)    2.5000           
+
+(X_U4.X_U7.X_U5.OUT2)    0.0000       (X_U4.X_U10.X_U2.OUT2)    0.0000          
+
+(X_U4.X_U10.X_U3.OUT2)    5.0000      (X_U4.X_U2.X_U21.OUT2)    0.0000          
+
+(X_U4.X_U2.X_U22.OUT2)    0.0000      (X_U4.X_U2.X_U23.OUT2)    0.0000          
+
+(X_U4.X_U7.X_U13.OUT1)    5.0000      (X_U4.X_U7.X_U15.OUT2)    0.0000          
+
+(X_U4.X_U5.CONTROL_HIZ)    0.0000     (X_U4.X_U5.CONTROL_MID)    1.0000         
+
+(X_U4.X_LATCH_DELAY.N06081)   10.0000 (X_U4.X_LATCH_DELAY.N059950)    5.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -6.501E-03
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+    V_V5        -1.000E-06
+    X_U3.V152    4.559E-05
+    X_U3.V154    1.200E-09
+    X_U3.V20     0.000E+00
+    X_U3.V21     0.000E+00
+    X_U3.V22     0.000E+00
+    X_U3.V23     4.000E-04
+    X_U3.V26    -2.504E-10
+    X_U3.V27    -3.499E-10
+    X_U3.V28    -1.780E-09
+    X_U3.V30    -1.780E-09
+    X_U3.V31    -2.000E-12
+    X_U3.V149    2.585E-12
+    X_U3.V150    2.435E-12
+    X_U3.V151   -7.318E-09
+    X_U3.V153    5.100E-11
+    X_U3.V155   -5.749E-10
+    X_U3.V156   -7.740E-10
+    X_U4.V_VOS   0.000E+00
+    X_U4.X_U2.V_VCMNP   0.000E+00
+    X_U4.X_U2.V_VCMPN   0.000E+00
+    X_U4.X_U2.V_VCMPP   0.000E+00
+    X_U4.X_U2.V_VCMNN   0.000E+00
+    X_U4.X_U5.V_VLOGIC   0.000E+00
+    X_U4.X_U5.V_V1   3.309E-24
+    X_U4.X_U7.V_VS_MIN_SET   0.000E+00
+    X_U4.X_U7.V_VS_MAX_SET   0.000E+00
+    X_U4.X_U7.V_VLOGIC   0.000E+00
+    X_U4.X_U9.V_VLATCH   2.500E-12
+    X_U4.X_U10.V_V7   0.000E+00
+    X_U4.X_U10.V_V1   0.000E+00
+    X_U4.X_U10.V_V8   0.000E+00
+
+    TOTAL POWER DISSIPATION  -2.22E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/23/25 17:45:10 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_hold_circuit"  [ C:\Users\15062\Desktop\design\hold_circuit-pspicefiles\schematic1\sim_hold_circuit.sim 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .42
+

@@ -1,0 +1,148 @@
+
+**** 02/19/25 18:05:20 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_layer1"  [ C:\Users\15062\Desktop\design\layer1-PSpiceFiles\SCHEMATIC1\sim_layer1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_layer1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1000n 0 
+.OPTIONS ADVCONV
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAYER1
+R_R1         N00100 VCC  2k TC=0,0 
+V_V1         N00187 0  
++PULSE 710mV 1V 100n 200p 200p 10n 200n
+V_V2         VCC 0 3.3Vdc
+X_Q1         N00100 N00187 0 BFP420/INF
+
+**** RESUMING sim_layer1.cir ****
+.END
+
+**** 02/19/25 18:05:20 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_layer1"  [ C:\Users\15062\Desktop\design\layer1-PSpiceFiles\SCHEMATIC1\sim_layer1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BFP420          
+               NPN             
+       LEVEL    1            
+          IS  200.450000E-18 
+          BF   72.534        
+          NF    1.2432       
+         VAF   28.383        
+         IKF     .48731      
+         ISE   19.049000E-15 
+          NE    2.0518       
+          BR    7.8287       
+          NR    1.3325       
+         VAR   19.705        
+         IKR     .69141      
+         ISC   19.237000E-18 
+          NC    1.1724       
+         ISS    0            
+          RB    8.5757       
+         RBM    3.4849       
+         IRB  729.830000E-06 
+          RE     .31111      
+          RC     .10105      
+         CJE    1.806300E-15 
+         VJE     .8051       
+         MJE     .46576      
+         CJC  234.530000E-15 
+         VJC     .81969      
+         MJC     .30232      
+        XCJC     .3          
+         CJS    0            
+         VJS     .75         
+          FC     .73234      
+          TF    6.766100E-12 
+         XTF     .42199      
+         VTF     .23794      
+         ITF    1.000000E-03 
+          TR    2.324900E-09 
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 02/19/25 18:05:20 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_layer1"  [ C:\Users\15062\Desktop\design\layer1-PSpiceFiles\SCHEMATIC1\sim_layer1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    3.3000  (N00100)    3.2984 (N00187)     .7100 (X_Q1.1)     .7100     
+
+(X_Q1.2)    3.2984 (X_Q1.3)-34.26E-18 (X_Q1.10)     .7100                       
+
+(X_Q1.20)    3.2984                   (X_Q1.30)-34.26E-18                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.305E-08
+    V_V2        -8.222E-07
+
+    TOTAL POWER DISSIPATION   2.73E-06  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 02/19/25 18:05:20 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_layer1"  [ C:\Users\15062\Desktop\design\layer1-PSpiceFiles\SCHEMATIC1\sim_layer1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+
