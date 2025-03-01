@@ -1,0 +1,7 @@
+* source RESET
+X_U1         N00199 N00190 N00268 0 N00292 TLV3601
+V_V1         N00199 0  
++EXP 4.5 0 10n 10n 1u 10n
+V_V2         N00190 0 0.5Vdc
+V_V3         N00268 0 5Vdc
+R_R1         N00292 0 1k

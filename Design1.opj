@@ -1,6 +1,6 @@
 (ExpressProject "Design1"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[02/19/25]")
+  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[03/01/25]")
   (ProjectType "PCB")
   (Folder "Design Resources"
     (Folder "Library")
@@ -11,12 +11,21 @@
     (File ".\design1.dsn"
       (Type "Schematic Design"))
     (BuildFileAddedOrDeleted "x")
-    (CompileFileAddedOrDeleted "x"))
+    (CompileFileAddedOrDeleted "x")
+    (Display_Online_DRC_Results "FALSE")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
   (Folder "Layout")
-  (Folder "Outputs")
+  (Folder "Outputs"
+    (File ".\design1-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
   (Folder "Referenced Projects")
   (Folder "PSpice Resources"
-    (Folder "Simulation Profiles")
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\design1-pspicefiles\schematic1\sim_design1.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\design1-pspicefiles\schematic1\sim_design1.sim"
+        (DisplayName "SCHEMATIC1-sim_design1")
+        (Type "PSpice Profile")))
     (Folder "Model Libraries"
       (Sort User))
     (Folder "Stimulus Files"
@@ -27,10 +36,68 @@
   (MPSSessionName "15062")
   (GlobalState
     (FileView
-      (Path "Design Resources"))
+      (Path "Design Resources")
+      (Path "Design Resources" ".\design1.dsn")
+      (Path "Design Resources" ".\design1.dsn" "SCHEMATIC1")
+      (Path "Design Resources" ".\design1.dsn" "Design Cache")
+      (Path "Outputs")
+      (Select "Design Resources" ".\design1.dsn" "Design Cache"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 655"))
-      (Tab 0))))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 679"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1004 28 701")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "C:\USERS\15062\DESKTOP\DESIGN\DESIGN1.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (PartMRUSelector
+    (TLV3601
+      (FullPartName "TLV3601.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DESIGN_HOLD_CIRCUIT\TLV3601\LIBRARY\TLV3601.OLB")
+      (DeviceIndex "0"))
+    (VEXP
+      (FullPartName "VEXP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (OPAx333
+      (FullPartName "OPAx333.Normal")
+      (LibraryName "C:\USERS\15062\DESKTOP\DESIGN\MODEL\OPA333\OPAX333.OLB")
+      (DeviceIndex "0"))
+    (MBR0520LT1
+      (FullPartName "MBR0520LT1.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SCHOTTKY.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (BFG425W/PLP
+      (FullPartName "BFG425W/PLP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3601\library"))

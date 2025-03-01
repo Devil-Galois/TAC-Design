@@ -225,20 +225,12 @@
          "SCHEMATIC1")
       (Path "Design Resources" "C:\Users\15062\Desktop\design\hold_circuit.dsn"
          "Design Cache")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\15062\Desktop\design\hold_circuit.dsn" "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 655"))
-      (Tab 0))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1290 28 701")
-        (Scroll "-180 0")
-        (Zoom "92")
-        (Occurrence "/"))
-      (Path "C:\USERS\15062\DESKTOP\DESIGN\HOLD_CIRCUIT.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE1"))))
+        (Placement "44 0 1 -1 -1 -1 -1 0 340 0 655"))
+      (Tab 0))))

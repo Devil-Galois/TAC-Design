@@ -7,11 +7,17 @@
 * Profile Libraries :
 * Local Libraries :
 * From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\15062\Desktop\design\model\OPA656\OPA656.LIB" 
+.lib "C:\Users\15062\Desktop\design\model\OPA333\OPAx333.LIB" 
+.lib "C:\Users\15062\Desktop\design\model\OPA2735\OPAx735.LIB" 
+.lib "C:\Users\15062\Desktop\design\model\OPAx180\OPAx180.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\CSD18532Q5\CSD18532Q5B.lib" 
+.lib "C:\Users\15062\Desktop\design\model\CSD18540Q5B\CSD18540Q5B.lib" 
+.lib "C:\Users\15062\Desktop\design\model\LM358-TI\lmx58_lm2904.lib" 
 .lib "C:\Users\15062\Desktop\design\model\UCC27323\UCC3895_PSPICE_TRANS\ucc3895.lib" 
 .lib "C:\Users\15062\Desktop\design\model\TLV3605\tlv3605.lib" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\OPA388\OPAx388.LIB" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\LMP7721\LMP7721.LIB" 
-.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3601\tlv3601.lib" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5045\REF5045.LIB" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\ADG1236\adg1236.lib" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\THS3491\ths3491.lib" 

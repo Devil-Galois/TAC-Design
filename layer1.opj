@@ -1,6 +1,6 @@
 (ExpressProject "layer1"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[02/22/25]")
+  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[03/01/25]")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library")
@@ -87,10 +87,12 @@
       (Path "Design Resources" "C:\Users\15062\Desktop\design\layer1.dsn")
       (Path "Design Resources" "C:\Users\15062\Desktop\design\layer1.dsn"
          "SCHEMATIC1")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources" "C:\Users\15062\Desktop\design\layer1.dsn"
+         "SCHEMATIC1" "PAGE2"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 655"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 340 0 655"))
       (Tab 0))))
