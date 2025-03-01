@@ -1,6 +1,6 @@
 (ExpressProject "test"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[02/24/25]")
+  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[03/01/25]")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library")
@@ -34,8 +34,42 @@
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (Folder "Logs")
   (PartMRUSelector
-    (C
-      (FullPartName "C.Normal")
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (NE325S01/CEL
+      (FullPartName "NE325S01/CEL.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
+      (DeviceIndex "0"))
+    (BFG425W/PLP
+      (FullPartName "BFG425W/PLP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
+      (DeviceIndex "0"))
+    (BAT14-03w/INF
+      (FullPartName "BAT14-03w/INF.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\INFINEON.OLB")
+      (DeviceIndex "0"))
+    (BAT15-098/INF
+      (FullPartName "BAT15-098/INF.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\INFINEON.OLB")
+      (DeviceIndex "0"))
+    (BAT15-03W/INF
+      (FullPartName "BAT15-03W/INF.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\INFINEON.OLB")
+      (DeviceIndex "0"))
+    (BAT14-098/INF
+      (FullPartName "BAT14-098/INF.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\INFINEON.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
@@ -47,112 +81,73 @@
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
-    (TLV3601
-      (FullPartName "TLV3601.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DESIGN_HOLD_CIRCUIT\TLV3601\LIBRARY\TLV3601.OLB")
-      (DeviceIndex "0"))
-    (R
-      (FullPartName "R.Normal")
+    (L
+      (FullPartName "L.Normal")
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
-      (DeviceIndex "0"))
-    (VEXP
-      (FullPartName "VEXP.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (BFG425W/PLP
-      (FullPartName "BFG425W/PLP.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
       (DeviceIndex "0"))
     (BAT54/PLP
       (FullPartName "BAT54/PLP.Normal")
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_DIODE.OLB")
       (DeviceIndex "0"))
-    (BFT25A/PLP
-      (FullPartName "BFT25A/PLP.Normal")
+    (C
+      (FullPartName "C.Normal")
       (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (TVS
+      (FullPartName "TVS.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\TCLSCRIPTS\CAPPSPICEMODELAPP\TVS\HYBRID\SUPPORTFILES\TVS.OLB")
       (DeviceIndex "0"))
     (VPULSE
       (FullPartName "VPULSE.Normal")
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
-    (IDH20G65C6_L3
-      (FullPartName "IDH20G65C6_L3.Normal")
+    (TLV3605
+      (FullPartName "TLV3605.Normal")
       (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DESIGN_HOLD_CIRCUIT\SIMULATIONMODEL_COOLSIC_G6_SCHOTTKY_DIODES_650V_SPICE.OLB")
+         "C:\USERS\15062\DESKTOP\DESIGN\MODEL\TLV3605\LIBRARY\TLV3605.OLB")
       (DeviceIndex "0"))
-    (NE325S01/CEL
-      (FullPartName "NE325S01/CEL.Normal")
+    (TLV3601
+      (FullPartName "TLV3601.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DESIGN_HOLD_CIRCUIT\TLV3601\LIBRARY\TLV3601.OLB")
+      (DeviceIndex "0"))
+    (NE34018/CEL
+      (FullPartName "NE34018/CEL.Normal")
       (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
       (DeviceIndex "0"))
-    (TLV3603
-      (FullPartName "TLV3603.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DESIGN_HOLD_CIRCUIT\TLV3603\LIBRARY\TLV3603.OLB")
+    (NE71300N/CEL
+      (FullPartName "NE71300N/CEL.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
       (DeviceIndex "0"))
-    (IDC
-      (FullPartName "IDC.Normal")
+    (NE721S01/CEL
+      (FullPartName "NE721S01/CEL.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
+      (DeviceIndex "0"))
+    (NE46134/CEL
+      (FullPartName "NE46134/CEL.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
+      (DeviceIndex "0"))
+    (NE46100/CEL
+      (FullPartName "NE46100/CEL.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
+      (DeviceIndex "0"))
+    (NE85600/CEL
+      (FullPartName "NE85600/CEL.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
+      (DeviceIndex "0"))
+    (NE76184A/CEL
+      (FullPartName "NE76184A/CEL.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
+      (DeviceIndex "0"))
+    (VEXP
+      (FullPartName "VEXP.Normal")
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (OPAx388
-      (FullPartName "OPAx388.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DESIGN_HOLD_CIRCUIT\OPA388\OPAX388.OLB")
-      (DeviceIndex "0"))
-    (REF5045
-      (FullPartName "REF5045.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DESIGN_HOLD_CIRCUIT\REF5045\REF5045.OLB")
-      (DeviceIndex "0"))
-    (LMP7721
-      (FullPartName "LMP7721.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\DESIGN_HOLD_CIRCUIT\LMP7721\LMP7721.OLB")
-      (DeviceIndex "0"))
-    (CSD18532Q5B
-      (FullPartName "CSD18532Q5B.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CSD18532Q5\CSD18532Q5B.OLB")
-      (DeviceIndex "0"))
-    (CSD17577Q5A
-      (FullPartName "CSD17577Q5A.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SLPM140B\CSD17577Q5A.OLB")
-      (DeviceIndex "0"))
-    (OPAx188
-      (FullPartName "OPAx188.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SBOMAO2C\OPAX188.OLB")
-      (DeviceIndex "0"))
-    (VCC
-      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
-    (REF5025
-      (FullPartName "REF5025.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\REF5025_PSPICE_AIO\REF5025.OLB")
-      (DeviceIndex "0"))
-    (TL071
-      (FullPartName "TL071.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ADVANLS\OPA.OLB")
-      (DeviceIndex "0"))
-    (OPA656
-      (FullPartName "OPA656.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\OPA656\OPA656.OLB")
-      (DeviceIndex "0"))
-    (BFG540/PLP
-      (FullPartName "BFG540/PLP.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
       (DeviceIndex "0")))
   (GlobalState
     (FileView
@@ -164,7 +159,7 @@
          "Design Cache")
       (Path "Outputs")
       (Select "Design Resources" "C:\Users\15062\Desktop\design\test.dsn"
-         "SCHEMATIC1" "PAGE1"))
+         "Design Cache" "IMARKER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -175,7 +170,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 5 28 5 1004 28 701")
-        (Scroll "790 448")
+        (Scroll "676 56")
         (Zoom "80")
         (Occurrence "/"))
       (Path "C:\USERS\15062\DESKTOP\DESIGN\TEST.DSN")

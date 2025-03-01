@@ -1,0 +1,66 @@
+
+**** 03/01/23 11:18:53 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ C:\Modeling\TLV3605_ti\TLV3605-PSpiceFiles\SCHEMATIC1\test1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../tlv3605.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_DATA\cdssetup\OrCAD_PSpice\17.4.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 50n 0 
+.OPTIONS ADVCONV
+.OPTIONS FILEMODELSEARCH
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TLV3605
+X_U1         IN+ IN- VCCO VCCO 0 N848109 N848129 VCCO N001008 TLV3605
+R_R2         0 V-  1m TC=0,0 
+V_V1         IN+ 0  
++SIN 1.65 50m 500Meg 0 0 0
+V_VINN2         VCCO 0 3.3
+R_R4         0 N001008  1Meg TC=0,0 
+R_R5         N848129 N848109  100 TC=0,0 
+V_VINN3         VCCI 0 3.3
+V_VINN4         SHDN 0 1.8
+V_VINN5         IN- 0 1.65
+
+**** RESUMING test1.cir ****
+.END
+
+
+**** EXPANSION OF SUBCIRCUIT X_U1 ****
+X_U1.V_VOS X_U1.N833987 X_U1.IN+_BUFFER 500u
+X_U1.X_U4 X_U1.IN-_BUFFER X_U1.IN+_BUFFER X_U1.N00790
++ X_U1.VCCI_BUFFER X_U1.VEE_BUFFER INPUT_RANGE
+X_U1.X_U1 VCCO X_U1.V+_BUFFER 0 X_U1.V-_BUFFER SUPPLY_BUFFER
+X_U1.X_U11 VCCO X_U1.VLOGIC 0 X_U1.SHUTDOWN_IQ_CONTROL
++ X_U1.VCCI_BUFFER X_U1.VEE_BUFFER SHUTDOWNCURRENT
+X_U1.V_V8 X_U1.VLOGIC 0 5
+X_U1.X_U9 X_U1.N833987 X_U1.IN-_BUFFER X_U1.N811399 X_U1.VLOGIC 0
++ X_U1.HYSTERESIS X_U1.VLOGIC 0 HPA_COMPHYS
+X_U1.X_U10 X_U1.N836302 X_U1.N00790 N848129 N848109
++ X_U1.SHUTDOWN_IQ_CONTROL X_U1.N822051 X_U1.VLOGIC OUTPUT_STAGE
+X_U1.X_U13
+----------$
+ERROR(ORPSIM-16365): Subcircuit name identical with node name
+

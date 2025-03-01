@@ -1,0 +1,68 @@
+
+**** 02/28/25 20:26:30 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_method2"  [ C:\Users\15062\Desktop\design\design_method2-PSpiceFiles\SCHEMATIC1\sim_method2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_method2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\15062\Desktop\design\model\TLV3605\tlv3605.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\OPA388\OPAx388.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\LMP7721\LMP7721.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3601\tlv3601.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5045\REF5045.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\ADG1236\adg1236.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\THS3491\ths3491.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD25404Q3\CSD25404Q3.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD17573Q5B\CSD17573Q5B.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3603\tlv3603.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5050\REF5050.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5010_PSPICE_AIO\REF5010.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\sbomao2c\OPAx188.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\slpm140b\CSD17577Q5A.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5025_PSPICE_AIO\REF5025.LIB" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100n 0 
+.OPTIONS ADVCONV
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DESIGN_METHOD2
+X_U1         N00503 N00410 N00936 VCC VCC VCC 0 N00377 N00381 TLV3605
+V_V1         VCC 0 5.5Vdc
+V_V2         N00410 0 0.175Vdc
+V_V3         N00503 0  
++PULSE 0 0.35 10n 300p 300p 2n 100n
+X_Q1         N00936 N00503 N02307 BFG425W/PLP
+V_V4         N02307 0 -650mVdc
+R_R1         N00936 VCC  1k TC=0,0 
+V_V5         N06902 0  
++PULSE 0 2 10n 300p 300p 2n 100n
+C_C1         N07277 N07305  10p  TC=0,0 
+R_R2         N07277 VCC  2k TC=0,0 
+
+**** RESUMING sim_method2.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N07305.
+
+ERROR(ORPSIM-15142): Node N07305 is floating
+

@@ -1,0 +1,143 @@
+(ExpressProject "design_method2"
+  (ProjectVersion "19981106")
+  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[02/28/25]")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    ("Allegro Netlist Directory" "allegro")
+    (DOCKED "TRUE")
+    (DOCKING_POSITION "59420")
+    (NoModify)
+    (File ".\design_method2.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (Display_Online_DRC_Results "FALSE")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (PSPICE_DoNot_Show_WarningDlg "TRUE"))
+  (Folder "Layout")
+  (Folder "Outputs"
+    (File ".\design_method2-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\design_method2-pspicefiles\schematic1\sim_method2.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\design_method2-pspicefiles\schematic1\sim_method2.sim"
+        (DisplayName "SCHEMATIC1-sim_method2")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (Folder "Logs")
+  (PartMRUSelector
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (74121
+      (FullPartName "74121.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\MISC.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (MC100EL52/SO
+      (FullPartName "MC100EL52/SO.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\LATCH.OLB")
+      (DeviceIndex "0"))
+    (MC100E431/LCC
+      (FullPartName "MC100E431/LCC.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\LATCH.OLB")
+      (DeviceIndex "0"))
+    (MC100E175/LCC
+      (FullPartName "MC100E175/LCC.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\LATCH.OLB")
+      (DeviceIndex "0"))
+    (M62002/SO
+      (FullPartName "M62002/SO.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\MISCPOWER.OLB")
+      (DeviceIndex "0"))
+    (TFF
+      (FullPartName "TFF.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\LATCH.OLB")
+      (DeviceIndex "0"))
+    (54ACT74/LCC
+      (FullPartName "54ACT74/LCC.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\LATCH.OLB")
+      (DeviceIndex "0"))
+    (54ACT74
+      (FullPartName "54ACT74.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\LATCH.OLB")
+      (DeviceIndex "0"))
+    (54ACT74/FP
+      (FullPartName "54ACT74/FP.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\LATCH.OLB")
+      (DeviceIndex "0"))
+    (BFG425W/PLP
+      (FullPartName "BFG425W/PLP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VEXP
+      (FullPartName "VEXP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (TLV3605
+      (FullPartName "TLV3605.Normal")
+      (LibraryName
+         "C:\USERS\15062\DESKTOP\DESIGN\MODEL\TLV3605\LIBRARY\TLV3605.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Users\15062\Desktop\design\model\TLV3605\library")
+  (MPSSessionName "15062")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\15062\Desktop\design\design_method2.dsn")
+      (Path "Design Resources"
+         "C:\Users\15062\Desktop\design\design_method2.dsn" "Design Cache")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\15062\Desktop\design\design_method2.dsn" "Design Cache"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 655"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 5 1290 28 701")
+        (Scroll "190 190")
+        (Zoom "174")
+        (Occurrence "/"))
+      (Path "C:\USERS\15062\DESKTOP\DESIGN\DESIGN_METHOD2.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1"))))
