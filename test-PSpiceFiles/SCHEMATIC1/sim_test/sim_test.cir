@@ -7,6 +7,7 @@
 * Profile Libraries :
 * Local Libraries :
 * From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\15062\Desktop\design\model\UCC27323\UCC3895_PSPICE_TRANS\ucc3895.lib" 
 .lib "C:\Users\15062\Desktop\design\model\TLV3605\tlv3605.lib" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\OPA388\OPAx388.LIB" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\LMP7721\LMP7721.LIB" 

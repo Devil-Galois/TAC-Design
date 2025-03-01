@@ -1,0 +1,159 @@
+(ExpressProject "UCC3895"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "ucc3895.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "ucc3895.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\ucc3895-pspicefiles\transient\tran.sim"
+        (DisplayName "Transient-tran")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\ucc3895-pspicefiles\transient\tran.sim"))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User))
+    (Folder "Model Libraries"
+      (File ".\ucc3895.lib"
+        (DisplayName ".\ucc3895.lib")
+        (Type "PSpiceLibrary"))
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (UCCx7324
+      (FullPartName "UCCx7324.Normal")
+      (LibraryName
+         "C:\DOCUMENTS AND SETTINGS\A0866893\DESKTOP\SOURCE-TI\UCC3895_PSPICE_06FEB2009\UCC3895_PSPICE_TRANS\UCC3895.OLB")
+      (DeviceIndex "0"))
+    (UCCx895
+      (FullPartName "UCCx895.Normal")
+      (LibraryName
+         "C:\DOCUMENTS AND SETTINGS\A0866893\DESKTOP\SOURCE-TI\UCC3895_PSPICE_06FEB2009\UCC3895_PSPICE_TRANS\UCC3895.OLB")
+      (DeviceIndex "0"))
+    (UCC37324
+      (FullPartName "UCC37324.Normal")
+      (LibraryName
+         "C:\DOCUMENTS AND SETTINGS\A0866893\DESKTOP\SOURCE-TI\UCC3895_PSPICE_06FEB2009\UCC3895_PSPICE_TRANS\UCC3895.OLB")
+      (DeviceIndex "0"))
+    (UCC3895
+      (FullPartName "UCC3895.Normal")
+      (LibraryName
+         "C:\DOCUMENTS AND SETTINGS\A0866893\DESKTOP\SOURCE-TI\UCC3895_PSPICE_06FEB2009\UCC3895_PSPICE_TRANS\UCC3895.OLB")
+      (DeviceIndex "0"))
+    (S
+      (FullPartName "S.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (IPULSE
+      (FullPartName "IPULSE.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (MMBT2222ALT1
+      (FullPartName "MMBT2222ALT1.Normal")
+      (LibraryName "Y:\TI\UCC3895\PSPICE\UCC3895APP.OLB")
+      (DeviceIndex "0"))
+    (CNY17_2
+      (FullPartName "CNY17_2.Normal")
+      (LibraryName "Y:\TI\UCC3895\PSPICE\UCC3895APP.OLB")
+      (DeviceIndex "0"))
+    (MMBT2907A
+      (FullPartName "MMBT2907A.Normal")
+      (LibraryName "Y:\TI\UCC3895\PSPICE\UCC3895APP.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (EVALUE
+      (FullPartName "EVALUE.Normal")
+      (LibraryName "D:\ORCAD\ORCAD_10.3\TOOLS\CAPTURE\LIBRARY\PSPICE\ABM.OLB")
+      (DeviceIndex "0"))
+    (E
+      (FullPartName "E.Normal")
+      (LibraryName
+         "D:\ORCAD\ORCAD_10.3\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (MBR6045PF
+      (FullPartName "MBR6045PF.Normal")
+      (LibraryName "D:\ORCAD\ORCAD_10.3\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (MBR1540
+      (FullPartName "MBR1540.Normal")
+      (LibraryName "D:\ORCAD\ORCAD_10.3\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE.OLB")
+      (DeviceIndex "0"))
+    (Q2N2222
+      (FullPartName "Q2N2222.Normal")
+      (LibraryName
+         "D:\ORCAD\ORCAD_10.3\TOOLS\CAPTURE\LIBRARY\PSPICE\BIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (BC847C
+      (FullPartName "BC847C.Normal")
+      (LibraryName
+         "D:\ORCAD\ORCAD_10.3\TOOLS\CAPTURE\LIBRARY\PSPICE\EBIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (HUF75345S3S
+      (FullPartName "HUF75345S3S.Normal")
+      (LibraryName "Y:\TI\UCC3895\PSPICE\UCC3895APP.OLB")
+      (DeviceIndex "0"))
+    (UCC1895
+      (FullPartName "UCC1895.Normal")
+      (LibraryName "Y:\TI\UCC3895\PSPICE\UCC3895.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (3448G
+      (FullPartName "3448G.Normal")
+      (LibraryName "Y:\TI\UCC3895\PSPICE\UCC3895APP.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\Documents and Settings\a0866893\Desktop\Source-TI\UCC3895_PSPICE_06FEB2009\UCC3895_PSPICE_TRANS")
+  (MPSSessionName "a0866893")
+  (GlobalState
+    (FileView
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -23 0 200 0 683"))
+      (Tab 0))))

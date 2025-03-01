@@ -1,5 +1,5 @@
 
-**** 03/01/25 09:31:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/01/25 10:13:00 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -19,6 +19,7 @@
 * Profile Libraries :
 * Local Libraries :
 * From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\15062\Desktop\design\model\UCC27323\UCC3895_PSPICE_TRANS\ucc3895.lib" 
 .lib "C:\Users\15062\Desktop\design\model\TLV3605\tlv3605.lib" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\OPA388\OPAx388.LIB" 
 .lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\LMP7721\LMP7721.LIB" 
@@ -58,8 +59,8 @@ X_U1         N28732 N28616 N30371 VCC VCC VCC 0 N30747 N30741 TLV3605
 X_Q1         N30717 N30741 N30567 BFG425W/PLP
 V_V6         N30567 0 0.38Vdc
 R_R3         VCC N30717  1k TC=0,0 
-V_V7         N30974 0  
-+PULSE 0 5 50n 1n 1n 1.5u 2u
+V_V7         N40037 0  
++PULSE 5 0 50n 1n 1n 1.5u 2u
 X_Q2         N32846 N30747 N33338 BFG425W/PLP
 V_V8         N32730 0 5Vdc
 R_R4         N32846 N32730  1k TC=0,0 
@@ -67,13 +68,19 @@ V_V9         N33338 0 0.38Vdc
 R_R5         N29345 N33678  30 TC=0,0 
 X_D1         N32314 N28732 BAT14-03w/INF
 X_Q3         N29345 N30717 N26903 BFG425W/PLP
-X_B1         N30974 N32846 N33678 NE325S01/CEL
+X_B1         N40037 N32846 N33678 NE325S01/CEL
 I_I1         VCC N28732 DC 1uAdc  
+V_V10         N40704 0  
++PULSE 5 0 50n 1n 1n 1.5u 2u
+X_U2         N40704 0 N40798 N40802 N40925 N40843 UCCX7324
+V_V11         N40925 0 12Vdc
+C_C2         0 N40925  100n  TC=0,0 
+C_C3         0 N40925  1u  TC=0,0 
 
 **** RESUMING sim_test.cir ****
 .END
 
-**** 03/01/25 09:31:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/01/25 10:13:00 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -100,7 +107,7 @@ I_I1         VCC N28732 DC 1uAdc
          XTI    2.5          
 
 
-**** 03/01/25 09:31:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/01/25 10:13:00 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -156,7 +163,7 @@ I_I1         VCC N28732 DC 1uAdc
            D     .87             .87             .87         
 
 
-**** 03/01/25 09:31:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/01/25 10:13:00 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -189,7 +196,7 @@ I_I1         VCC N28732 DC 1uAdc
          XTI    3            
 
 
-**** 03/01/25 09:31:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/01/25 10:13:00 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -243,193 +250,231 @@ I_I1         VCC N28732 DC 1uAdc
          VON   -1.25         
         VOFF   -2.5          
 
-
-**** 03/01/25 09:31:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
- ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
+Starting pseudo-transient algorithm.
 
+INFO(ORPSIM-16594): To improve Pseudotransient Convergence and Performance, set following options to relax stabilization criteria for capacitor currents and inductor voltages: PTRANABSTOL=1e-5, PTRANVNTOL=1e-4
 
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+WARNING(ORPSIM-16534): Using high values of ITL4 for Speed Level > 0 may increase total simulation job time.
 
-
-******************************************************************************
+ERROR -- Convergence problem in transient bias point calculation
 
 
+  Last node voltages tried were:
 
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(  VCC)    5.0000  (  VSS)   -5.0000  (N26903)    2.0000 (N28616)    4.0000     
+(  VCC)     .2946  (  VSS)    -.2946  (N26903)     .1179 (N28616)     .2357     
 
-(N28732)     .0379 (N29345)     .0348 (N30371)    1.2500 (N30567)     .3800     
+(N28732)     .0277 (N29345)     .2946 (N30371)     .0737 (N30567)     .0224     
 
-(N30717)     .4083 (N30741)    1.3589 (N30747)    1.0250 (N30974)    0.0000     
+(N30717)     .2946 (N30741)     .0810 (N30747)     .0604 (N32314)     .2943     
 
-(N32314)     .0348 (N32730)    5.0000 (N32846)     .7875 (N33338)     .3800     
+(N32730)     .2946 (N32846)     .2946 (N33338)     .0224 (N33678)     .2946     
 
-(N33678)     .0348 (X_B1.4)     .7622 (X_B1.5)     .0253 (X_B1.6)     .0348     
+(N40037)     .2946 (N40704)     .2946 (N40798)    0.0000 (N40802)     .0064     
 
-(X_B1.7)     .7622 (X_B1.8)     .0253 (X_B1.9)     .0348 (X_D1.1)     .0348     
+(N40843)     .0064 (N40925)     .7072 (X_B1.4)     .2946 (X_B1.5)     .2946     
 
-(X_D1.2)     .0379 (X_Q1.4)     .4083 (X_Q1.5)    1.3589 (X_Q1.6)     .3800     
+(X_B1.6)     .2946 (X_B1.7)     .2946 (X_B1.8)     .2946 (X_B1.9)     .2946     
 
-(X_Q1.7)     .3800 (X_Q1.8)     .3800 (X_Q2.4)     .7875 (X_Q2.5)    1.0250     
+(X_D1.1)     .2943 (X_D1.2)     .0277 (X_Q1.4)     .2946 (X_Q1.5)     .0810     
 
-(X_Q2.6)     .3800 (X_Q2.7)     .3800 (X_Q2.8)     .3800 (X_Q3.4)     .0348     
+(X_Q1.6)     .0224 (X_Q1.7)     .0224 (X_Q1.8)     .0224 (X_Q2.4)     .2946     
 
-(X_Q3.5)     .4083 (X_Q3.6)    2.0000 (X_Q3.7)    2.0000 (X_Q3.8)    2.0000     
+(X_Q2.5)     .0604 (X_Q2.6)     .0224 (X_Q2.7)     .0224 (X_Q2.8)     .0224     
 
-(X_B1.10)     .0337                   (X_B1.11)     .0348                       
+(X_Q3.4)     .2946 (X_Q3.5)     .2946 (X_Q3.6)     .1179 (X_Q3.7)     .1179     
 
-(X_B1.12)     .0337                   (X_D1.10)     .0348                       
+(X_Q3.8)     .1179 (X_U2.2)     .7072 (X_U2.3)    -.2882 (X_U2.4)-489.1E-12     
 
-(X_U1.EN)    0.0000                   (X_U1.LATCH)    5.0000                    
+(X_U2.7)    -.2882 (X_U2.8)     .5893 (X_U2.9)     .7072 (X_B1.10)     .2946    
 
-(X_U1.VHYST)    0.0000                (X_U1.VLOGIC)    1.0000                   
+(X_B1.11)     .2946                   (X_B1.12)     .2946                       
 
-(X_U1.IN+BUFF)     .0379              (X_U1.IN-BUFF)    4.0000                  
+(X_D1.10)     .2943                   (X_U1.EN)    0.0000                       
 
-(X_U1.N891263)    0.0000              (X_U1.N891299)    0.0000                  
+(X_U2.10)    -.2882                   (X_U2.11)-489.1E-12                       
 
-(X_U1.N892466)     .0384              (X_U1.N892600)    0.0000                  
+(X_U2.12)    -.2882                   (X_U2.15) 58.93E-09                       
 
-(X_U1.N893364)    5.0000              (X_U1.N893591)    0.0000                  
+(X_U2.17)     .5893                   (X_U2.18) 58.93E-09                       
 
-(X_U1.X_U3.VH)    0.0000              (X_U1.X_U5.1V)    1.0000                  
+(X_U2.19)    0.0000                   (X_U2.21)    0.0000                       
 
-(X_U1.X_U7.1V)    1.0000              (X_U1.N8917111) 1.000E-06                 
+(X_U2.VA)    0.0000                   (X_U2.VB)    0.0000                       
 
-(X_U1.X_U3.OUT)    0.0000             (X_U1.X_U7.POR)    0.0000                 
+(X_U1.LATCH)    0.0000                (X_U1.VHYST)    0.0000                    
 
-(X_U1.X_U9.VLE)    1.2500             (X_U1.X_U3.VMID)    2.5000                
+(X_U1.VLOGIC)     .0589               (X_U1.IN+BUFF)     .0016                  
 
-(X_U1.VEE_BUFFER)    0.0000           (X_U1.X_U11.OUT2)    1.0000               
+(X_U1.IN-BUFF)     .0139              (X_U1.N891263)    0.0000                  
 
-(X_U1.VCCI_BUFFER)    5.0000          (X_U1.X_U3.INNNEW)    4.0000              
+(X_U1.N891299)    0.0000              (X_U1.N892466)     .0017                  
 
-(X_U1.X_U4.N06672)    0.0000          (X_U1.X_U5.X_U2.4)    0.0000              
+(X_U1.N892600)     .0010              (X_U1.N893364)    0.0000                  
 
-(X_U1.X_U9.N00729)    1.2500          (X_U1.X_U12.N11903)    5.0000             
+(X_U1.N893591)     .0174              (X_U1.X_U3.VH)    0.0000                  
 
-(X_U1.X_U12.N11909)    5.0000         (X_U1.X_U12.N11937)    5.0000             
+(X_U1.X_U5.1V)     .0589              (X_U1.X_U7.1V)     .0589                  
 
-(X_U1.X_U12.N11943)    5.0000         (X_U1.X_U12.N12017)    5.0000             
+(X_U1.N8917111) 59.01E-09             (X_U1.X_U3.OUT)     .0010                 
 
-(X_U1.X_U12.N12181)    0.0000         (X_U1.X_U12.N12289)    0.0000             
+(X_U1.X_U7.POR)     .0035             (X_U1.X_U9.VLE)     .0043                 
 
-(X_U1.X_U12.VLOGIC)    5.0000         (X_U1.X_U12.X_U4.4)    5.0000             
+(X_U1.X_U3.VMID) 511.6E-06            (X_U1.VEE_BUFFER)    0.0000               
 
-(X_U1.X_U12.X_U5.4)    0.0000         (X_U1.X_U12.X_U6.3)    5.0000             
+(X_U1.X_U11.OUT2)    0.0000           (X_U1.VCCI_BUFFER)     .0174              
 
-(X_U1.X_U19.N20155)    5.3000         (X_U1.X_U19.N20415)    -.3000             
+(X_U1.X_U3.INNNEW) 818.6E-06          (X_U1.X_U4.N06672) 120.6E-06              
 
-(X_U1.X_U19.N20531)    0.0000         (X_U1.X_U19.N20539)    -.3000             
+(X_U1.X_U5.X_U2.4)    0.0000          (X_U1.X_U9.N00729)     .0737              
 
-(X_U1.X_U19.N20826)    0.0000         (X_U1.X_U19.N20833)    0.0000             
+(X_U1.X_U12.N11903)     .0174         (X_U1.X_U12.N11909)    0.0000             
 
-(X_U1.X_U19.N20840)    0.0000         (X_U1.X_U4.N065860)    0.0000             
+(X_U1.X_U12.N11937)    0.0000         (X_U1.X_U12.N11943)     .0174             
 
-(X_U1.X_U5.N903216)    1.3750         (X_U1.X_U5.N903460)    1.3673             
+(X_U1.X_U12.N12017)     .2946         (X_U1.X_U12.N12181)    0.0000             
 
-(X_U1.X_U5.N903474)    1.0250         (X_U1.X_U5.N903506)    1.0250             
+(X_U1.X_U12.N12289)    0.0000         (X_U1.X_U12.VLOGIC)     .2946             
 
-(X_U1.X_U5.N903742)    1.3666         (X_U1.X_U5.N903930)    1.0250             
+(X_U1.X_U12.X_U4.4)    0.0000         (X_U1.X_U12.X_U5.4)    0.0000             
 
-(X_U1.X_U5.X_U10.4)    0.0000         (X_U1.X_U7.N784593)    5.5600             
+(X_U1.X_U12.X_U6.3)    0.0000         (X_U1.X_U19.N20155)     .0350             
 
-(X_U1.X_U7.N784683)    5.0000         (X_U1.X_U7.N784697)    0.0000             
+(X_U1.X_U19.N20415)    -.0177         (X_U1.X_U19.N20531)    0.0000             
 
-(X_U1.X_U7.N784807)    0.0000         (X_U1.X_U7.N784909)    2.3900             
+(X_U1.X_U19.N20539)    -.0177         (X_U1.X_U19.N20826)    0.0000             
 
-(X_U1.X_U7.N785081)    2.3900         (X_U1.X_U7.X_U17.4)    0.0000             
+(X_U1.X_U19.N20833)    0.0000         (X_U1.X_U19.N20840)    0.0000             
 
-(X_U1.X_U19.N202710)    5.3000        (X_U1.X_U19.X_U24.6)    0.0000            
+(X_U1.X_U4.N065860) 60.30E-06         (X_U1.X_U5.N903216)     .0810             
 
-(X_U1.X_U5.N9032561)    1.2000        (X_U1.X_U5.N9040901)    1.2000            
+(X_U1.X_U5.N903460)     .0810         (X_U1.X_U5.N903474)     .0604             
 
-(X_U1.X_U7.X_U5.OUT2)    0.0000       (X_U1.X_U12.X_U2.OUT2)    0.0000          
+(X_U1.X_U5.N903506)     .0604         (X_U1.X_U5.N903742)     .0810             
 
-(X_U1.X_U12.X_U3.OUT2)    5.0000      (X_U1.X_U19.X_U1.OUT2)    0.0000          
+(X_U1.X_U5.N903930)     .0604         (X_U1.X_U5.X_U10.4)    0.0000             
 
-(X_U1.X_U5.OUTOFRANGE)    0.0000      (X_U1.X_U7.X_U13.OUT1)    5.0000          
+(X_U1.X_U7.N784593)     .3276         (X_U1.X_U7.N784683)     .0010             
 
-(X_U1.X_U7.X_U15.OUT2)    0.0000      (X_U1.X_U7.X_U16.OUT2)    0.0000          
+(X_U1.X_U7.N784697)    0.0000         (X_U1.X_U7.N784807)     .0035             
 
-(X_U1.X_U19.X_U21.OUT2)    0.0000     (X_U1.X_U19.X_U22.OUT2)    0.0000         
+(X_U1.X_U7.N784909)     .1408         (X_U1.X_U7.N785081)     .1408             
 
-(X_U1.X_U19.X_U23.OUT2)    0.0000     (X_U1.X_U5.SHUTDOWN_OUT)    0.0000        
+(X_U1.X_U7.X_U17.4)    0.0000         (X_U1.X_U19.N202710)     .0350            
 
-(X_U1.SHUTDOWN_IQ_CONTROL)    1.0000  (X_U1.X_LATCH_DEALY.N06081)   10.0000     
-
-(X_U1.X_U5.OUTPUT_SHUTDOWN)    0.0000 (X_U1.X_LATCH_DEALY.N059950)    5.0000    
-
-(X_U1.X_Supply_Currents.N833564)     .0052                                      
-
-(X_U1.X_Supply_Currents.N833572)     .0075                                      
-
-(X_U1.X_Supply_Currents.N833584) 100.0E-06                                      
-
-(X_U1.X_Supply_Currents.N833598)     .0015                                      
-
-(X_U1.X_Supply_Currents.X_U1.VCC1)    4.9948                                    
-
-(X_U1.X_Supply_Currents.X_U2.VCC1)    4.9925             
-
-
-
-
-    VOLTAGE SOURCE CURRENTS
-    NAME         CURRENT
-
-    V_V1        -1.729E-02
-    V_V2         0.000E+00
-    V_V3        -2.057E-10
-    V_V4        -1.000E-06
-    V_V6         1.225E-02
-    V_V7         4.210E-03
-    V_V8        -4.213E-03
-    V_V9         2.469E-06
-    X_U1.V_V8    0.000E+00
-    X_U1.V_VOS   0.000E+00
-    X_U1.X_Supply_Currents.V_V2   0.000E+00
-    X_U1.X_Supply_Currents.V_V1   0.000E+00
-    X_U1.X_Supply_Currents.V_V3   0.000E+00
-    X_U1.X_Supply_Currents.V_V4   0.000E+00
-    X_U1.X_U12.V_V1   0.000E+00
-    X_U1.X_U12.V_V8   0.000E+00
-    X_U1.X_U12.V_V7   0.000E+00
-    X_U1.X_U19.V_VCMNN   0.000E+00
-    X_U1.X_U19.V_VCMPN   0.000E+00
-    X_U1.X_U19.V_VCMNP   0.000E+00
-    X_U1.X_U19.V_VCMPP   0.000E+00
-    X_U1.X_U9.V_VLATCH   0.000E+00
-    X_U1.X_U5.V_VLOGIC   0.000E+00
-    X_U1.X_U5.V_V17  -3.745E-08
-    X_U1.X_U5.V_V18  -3.745E-08
-    X_U1.X_U5.V_V14  -7.662E-03
-    X_U1.X_U5.V_V16  -7.662E-03
-    X_U1.X_U7.V_VS_MAX_SET   0.000E+00
-    X_U1.X_U7.V_VLOGIC   0.000E+00
-    X_U1.X_U7.V_VS_MIN_SET1   0.000E+00
-    X_U1.X_U7.V_VS_MIN_SET   0.000E+00
-
-    TOTAL POWER DISSIPATION   1.13E-01  WATTS
-
-
-
-          JOB CONCLUDED
-
-**** 03/01/25 09:31:15 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
-
-
- ****     JOB STATISTICS SUMMARY
-
-
-******************************************************************************
-
-
-
-  Total job time (using Solver 1)   =        1.63
-
+(X_U1.X_U19.X_U24.6)    0.0000        (X_U1.X_U5.N9032561)     .0707            
+
+(X_U1.X_U5.N9040901)     .0707        (X_U1.X_U7.X_U5.OUT2)    0.0000           
+
+(X_U1.X_U12.X_U2.OUT2)     .0174      (X_U1.X_U12.X_U3.OUT2)     .0174          
+
+(X_U1.X_U19.X_U1.OUT2)    0.0000      (X_U1.X_U5.OUTOFRANGE)    0.0000          
+
+(X_U1.X_U7.X_U13.OUT1)     .0010      (X_U1.X_U7.X_U15.OUT2)     .0035          
+
+(X_U1.X_U7.X_U16.OUT2)     .0035      (X_U1.X_U19.X_U21.OUT2)    0.0000         
+
+(X_U1.X_U19.X_U22.OUT2)    0.0000     (X_U1.X_U19.X_U23.OUT2)    0.0000         
+
+(X_U1.X_U5.SHUTDOWN_OUT)     .0035    (X_U1.SHUTDOWN_IQ_CONTROL)    0.0000      
+
+(X_U1.X_LATCH_DEALY.N06081)    0.0000 (X_U1.X_U5.OUTPUT_SHUTDOWN)    0.0000     
+
+(X_U1.X_LATCH_DEALY.N059950)    0.0000                                          
+
+(X_U1.X_Supply_Currents.N833564) 306.4E-06                                      
+
+(X_U1.X_Supply_Currents.N833572) 442.0E-06                                      
+
+(X_U1.X_Supply_Currents.N833584) 5.893E-06                                      
+
+(X_U1.X_Supply_Currents.N833598) 88.39E-06                                      
+
+(X_U1.X_Supply_Currents.X_U1.VCC1)     .2946                                    
+
+(X_U1.X_Supply_Currents.X_U2.VCC1)     .2946             
+
+
+  These voltages failed to converge:
+
+    V(X_U1.N892466)           =    27.76mV  \    1.664mV
+    V(X_U1.IN+BUFF)           =    27.73mV  \    1.634mV
+    V(X_U2.4)                 =  -282.59uV  \  -489.10pV
+    V(X_U2.2)                 =   699.12mV  \   707.16mV
+    V(X_U2.3)                 =  -439.22mV  \  -288.22mV
+    V(N40843)                 =    7.887mV  \    6.419mV
+    V(X_U2.9)                 =   699.12mV  \   707.16mV
+    V(X_U2.7)                 =    -4.992V  \  -288.23mV
+    V(X_U2.10)                =  -439.22mV  \  -288.22mV
+    V(N40802)                 =    7.887mV  \    6.419mV
+    V(X_U2.11)                =  -282.59uV  \  -489.10pV
+    V(X_U2.12)                =    -4.992V  \  -288.23mV
+    V(X_U1.X_U3.VMID)         =   147.32mV  \   511.61uV
+    V(X_U1.VCCI_BUFFER)       =   294.65mV  \    17.36mV
+    V(X_U1.X_U3.INNNEW)       =   235.72mV  \   818.58uV
+    V(X_U1.N892600)           =   293.55mV  \    1.023mV
+    V(X_U1.IN-BUFF)           =   235.72mV  \    13.89mV
+    V(X_U1.X_U3.OUT)          =   294.65mV  \    1.023mV
+    V(X_U1.X_U4.N065860)      =    15.82mV  \    60.30uV
+    V(X_U1.N891263)           =    15.82mV  \         0V
+    V(X_U1.X_U4.N06672)       =    34.60mV  \   120.60uV
+    V(X_U1.X_U19.N202710)     =   312.33mV  \    35.04mV
+    V(X_U1.X_U19.N20155)      =   312.33mV  \    35.04mV
+    V(X_U1.X_U12.N11903)      =   294.65mV  \    17.36mV
+    V(X_U1.X_U12.X_U3.OUT2)   =   294.65mV  \    17.36mV
+    V(X_U1.N893591)           =   293.61mV  \    17.36mV
+    V(X_U1.X_U12.N11943)      =   293.61mV  \    17.36mV
+    V(X_U1.X_U12.X_U2.OUT2)   =   294.65mV  \    17.36mV
+    V(X_U1.X_U5.SHUTDOWN_OUT) =    58.93mV  \    3.473mV
+    V(X_U1.X_U7.N784807)      =    58.72mV  \    3.473mV
+    V(X_U1.X_U7.N784683)      =   294.65mV  \    1.023mV
+    V(X_U1.X_U7.X_U15.OUT2)   =    58.93mV  \    3.473mV
+    V(X_U1.X_U7.POR)          =    58.72mV  \    3.473mV
+    V(X_U1.X_U7.X_U16.OUT2)   =    58.93mV  \    3.473mV
+    V(X_U1.X_U7.X_U13.OUT1)   =   294.65mV  \    1.023mV
+
+  These supply currents failed to converge:
+
+    I(X_U2.EB1)               =    4.553mA  \    9.178nA
+    I(X_U2.EB2)               =    4.553mA  \    9.178nA
+    I(X_U1.X_U3.EOUT)         =   -1.097mA  \   -10.42pA
+    I(X_U1.X_U4.e.T_T1.eA1)   =   375.63uA  \    1.206uA
+    I(X_U1.X_U4.e.T_T1.eB1)   =  -375.63uA  \         0A
+    I(X_U1.X_U4.E_E1)         =  -375.63uA  \   -1.206uA
+    I(X_U1.X_U12.X_U3.EOUT)   =   -1.036mA  \  -117.86pA
+    I(X_U1.X_U12.X_U2.EOUT)   =   -1.036mA  \  -187.38pA
+    I(X_U1.X_U5.X_U4.EOUT)    =  -207.96uA  \   -23.57pA
+    I(X_U1.X_U7.X_U15.EOUT)   =  -207.18uA  \   -23.57pA
+    I(X_U1.X_U7.X_U16.EOUT)   =  -207.18uA  \   -23.57pA
+    I(X_U1.X_U6.X_U1.EVSS_NEW) =   -3.879nA  \   -3.796nA
+    I(X_Q1.L1)                =    41.26pA  \    14.45pA
+    I(X_Q1.L2)                =   473.55pA  \   844.28pA
+    I(X_Q1.L3)                =  -514.81pA  \  -858.73pA
+    I(X_Q2.L1)                =    25.21pA  \   -32.73pA
+    I(X_Q2.L2)                =   468.78pA  \   853.34pA
+    I(X_Q2.L3)                =  -493.99pA  \  -820.62pA
+    I(X_Q3.L1)                =   401.03pA  \   344.04pA
+    I(X_Q3.L2)                =   131.00pA  \   437.58pA
+    I(X_Q3.L3)                =  -532.02pA  \  -781.62pA
+    I(X_B1.Lgx)               = 111.02e-18A  \    3.600pA
+    IA(X_U1.X_U4.T_T1)        =   375.63uA  \    1.206uA
+    IB(X_U1.X_U4.T_T1)        =  -375.63uA  \         0A
+    I(V_V1)                   =   -94.41uA  \   -5.676uA
+    I(V_V3)                   =   532.02pA  \   781.62pA
+    I(V_V6)                   =   514.81pA  \   858.73pA
+    I(V_V8)                   =  -550.41pA  \  -858.21pA
+    I(V_V9)                   =   493.99pA  \   820.62pA
+    I(V_V11)                  =   -3.176mA  \   -2.640mA
+    I(X_U1.X_U5.V_V17)        =   -1.653nA  \   -1.596nA
+    I(X_U1.X_U5.V_V18)        =   -1.653nA  \   -1.596nA
+    I(X_U1.X_U5.V_V14)        =   -2.226nA  \   -2.200nA
+    I(X_U1.X_U5.V_V16)        =   -2.226nA  \   -2.200nA
+
+  These devices failed to converge:
+    X_U1.X_U3.EOUT X_U1.X_U12.X_U3.EOUT X_U1.X_U12.X_U2.EOUT X_U1.X_U5.X_U10.E1 
+    X_U1.X_U7.X_U17.E1 X_U1.X_U7.X_U15.EOUT X_U1.X_U7.X_U16.EOUT 
+
+**** Interrupt ****
