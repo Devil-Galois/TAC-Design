@@ -3,7 +3,6 @@
  lib=D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5045\REF5045.LIB, offset=2936, size=5077
  lib=D:\Cadence\SPB_22.1\tools\PSpice\Library\phil_rf.lib, offset=83657, size=933
  lib=D:\Cadence\SPB_22.1\tools\PSpice\Library\Infineon.lib, offset=54827, size=330
- lib=D:\Cadence\SPB_22.1\tools\PSpice\Library\cel.lib, offset=2616, size=2247
  lib=C:\Users\15062\Desktop\design\model\TLV3605\tlv3605.lib, offset=11685, size=163
  lib=C:\Users\15062\Desktop\design\model\TLV3605\tlv3605.lib, offset=7102, size=308
  lib=C:\Users\15062\Desktop\design\model\TLV3605\tlv3605.lib, offset=6908, size=193

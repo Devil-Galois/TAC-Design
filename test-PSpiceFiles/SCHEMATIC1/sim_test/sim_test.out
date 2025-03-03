@@ -1,5 +1,5 @@
 
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/03/25 18:28:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -59,19 +59,18 @@ V_V1         VCC 0 5Vdc
 V_V2         VSS 0 -5Vdc
 V_V3         N54074 0 0.4Vdc
 V_V4         N28616 0 4.5Vdc
-C_C1         0 N28732  2n  TC=0,0 
-R_R2         N32314 N29345  300 TC=0,0 
+C_C1         0 N28732  1n  TC=0,0 
+R_R2         N32314 N29345  700 TC=0,0 
 X_U1         N28732 N28616 N30371 VCC VCC VCC 0 N30724 N69582 TLV3605
 X_Q2         N32846 N30724 N54074 BFG425W/PLP
 R_R4         N32846 VCC  1k TC=0,0 
 X_D1         N32314 N28732 BAT14-03w/INF
 X_Q3         N29345 N30724 N54074 BFG425W/PLP
-X_B1         N69343 N32846 N69686 NE325S01/CEL
 V_V10         N40704 0  
 +PULSE 0 3.3 50n 1n 1n 1.5u 2u
-X_U2         N40704 0 N40798 N40802 VDD N69343 UCCX7324
-C_C2         0 VDD  100n  TC=0,0 
-C_C3         0 VDD  1u  TC=0,0 
+X_U2         N40704 0 N40798 N40802 N40929 N69343 UCCX7324
+C_C2         0 N40929  100n  TC=0,0 
+C_C3         0 N40929  1u  TC=0,0 
 I_I3         VCC N28732 DC 1uAdc  
 X_U3         VCC N64950 0 N65048 N65052 REF5045
 C_C4         0 N65048  1u  TC=0,0 
@@ -79,12 +78,16 @@ V_V12         VDD 0 12Vdc
 V_V13         VEE 0 -12Vdc
 C_C5         0 VCC  1u  TC=0,0 
 C_C6         0 N65052  22u  TC=0,0 
-R_R5         N29345 N69686  20 TC=0,0 
+R_R5         N29345 N69343  20 TC=0,0 
+R_R6         N40929 VDD  1k TC=0,0 
+R_R7         0 N40929  1k TC=0,0 
+V_V14         N40798 0  
++PULSE 1.023 1.375 100n 200p 200p 20n 200n
 
 **** RESUMING sim_test.cir ****
 .END
 
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/03/25 18:28:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -118,7 +121,7 @@ R_R5         N29345 N69686  20 TC=0,0
          XTI    1.5          
 
 
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/03/25 18:28:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -199,7 +202,7 @@ R_R5         N29345 N69686  20 TC=0,0
            D     .52         
 
 
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/03/25 18:28:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -219,7 +222,7 @@ R_R5         N29345 N69686  20 TC=0,0
           IS    1.000000E-18 
 
 
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/03/25 18:28:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -296,40 +299,7 @@ R_R5         N29345 N69686  20 TC=0,0
        XPART    0               0               0            
 
 
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
-
- ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
-
-
- ****     GaAs MESFET MODEL PARAMETERS
-
-
-******************************************************************************
-
-
-
-
-               X_B1.NE32500    
-       LEVEL    1            
-         VTO    -.8          
-         VBI     .715        
-       ALPHA    8            
-        BETA     .103        
-          RG    3            
-         CGD   20.000000E-15 
-         CGS  300.000000E-15 
-         CDS  130.000000E-15 
-          IS  300.000000E-15 
-         TAU    4.000000E-12 
-           N    1.22         
-       DELTA    1            
-       GAMMA     .08         
-      VDELTA     .1          
-          EG    1.43         
-         XTI    3            
-
-
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/03/25 18:28:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -384,7 +354,7 @@ R_R5         N29345 N69686  20 TC=0,0
         VOFF   -2.5          
 
 
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/03/25 18:28:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -401,37 +371,31 @@ R_R5         N29345 N69686  20 TC=0,0
 
 (  VCC)    5.0000  (  VDD)   12.0000  (  VEE)  -12.0000  (  VSS)   -5.0000      
 
-(N28616)    4.5000 (N28732)     .1835 (N29345)     .1806 (N30371)    1.2500     
+(N28616)    4.5000 (N28732)     .1597 (N29345)     .1567 (N30371)    1.2500     
 
-(N30724)    1.0238 (N32314)     .1806 (N32846)     .8329 (N40704)    0.0000     
+(N30724)    1.0230 (N32314)     .1567 (N32846)    4.9987 (N40704)    0.0000     
 
-(N40798)    0.0000 (N40802) 15.41E-12 (N54074)     .4000 (N64950)     .5750     
+(N40798)    1.0230 (N40802) 7.710E-12 (N40929)    6.0000 (N54074)     .4000     
 
-(N65048)    1.2000 (N65052)    4.5023 (N69343)     .0096 (N69582)    1.3750     
+(N64950)     .5750 (N65048)    1.2000 (N65052)    4.5023 (N69343)     .0082     
 
-(N69686)     .0913 (X_B1.4)     .8079 (X_B1.5)     .0614 (X_B1.6)     .0910     
+(N69582)    1.3750 (X_D1.1)     .1567 (X_D1.2)     .1597 (X_Q2.4)    4.9987     
 
-(X_B1.7)     .8079 (X_B1.8)     .0614 (X_B1.9)     .0910 (X_D1.1)     .1806     
+(X_Q2.5)    1.0230 (X_Q2.6)     .4000 (X_Q2.7)     .4000 (X_Q2.8)     .4000     
 
-(X_D1.2)     .1835 (X_Q2.4)     .8329 (X_Q2.5)    1.0238 (X_Q2.6)     .4000     
+(X_Q3.4)     .1567 (X_Q3.5)    1.0230 (X_Q3.6)     .4000 (X_Q3.7)     .4000     
 
-(X_Q2.7)     .4000 (X_Q2.8)     .4000 (X_Q3.4)     .1806 (X_Q3.5)    1.0238     
+(X_Q3.8)     .4000 (X_U2.2)    6.0000 (X_U2.3)   -4.9918 (X_U2.4)     .0074     
 
-(X_Q3.6)     .4000 (X_Q3.7)     .4000 (X_Q3.8)     .4000 (X_U2.2)   12.0000     
+(X_U2.7)   -4.9918 (X_U2.8)   10.0000 (X_U2.9)    6.0000 (X_U3.7)     .5840     
 
-(X_U2.3)   -4.9904 (X_U2.4)     .0086 (X_U2.7)   -4.9904 (X_U2.8)   10.0000     
-
-(X_U2.9)   12.0000 (X_U3.7)     .5840 (X_U3.8) 32.17E-06 (X_U3.9)    0.0000     
-
-(X_B1.10)     .0787                   (X_B1.11)     .0821                       
-
-(X_B1.12)     .0787                   (X_D1.10)     .1806                       
+(X_U3.8) 32.17E-06 (X_U3.9)    0.0000 (X_D1.10)     .1567                       
 
 (X_U1.EN)    0.0000                   (X_U2.10)   -5.0000                       
 
-(X_U2.11) 13.87E-12                   (X_U2.12)   -5.0000                       
+(X_U2.11) 6.939E-12                   (X_U2.12)   -5.0000                       
 
-(X_U2.15) 1.000E-06                   (X_U2.17)   10.0000                       
+(X_U2.15) 1.026E-06                   (X_U2.17)   10.0000                       
 
 (X_U2.18) 1.000E-06                   (X_U2.19)    0.0000                       
 
@@ -559,11 +523,11 @@ R_R5         N29345 N69686  20 TC=0,0
 
 (X_U1.VHYST)    0.0000                (X_U1.VLOGIC)    1.0000                   
 
-(X_U1.IN+BUFF)     .1835              (X_U1.IN-BUFF)    4.5000                  
+(X_U1.IN+BUFF)     .1597              (X_U1.IN-BUFF)    4.5000                  
 
 (X_U1.N891263)    0.0000              (X_U1.N891299)    0.0000                  
 
-(X_U1.N892466)     .1840              (X_U1.N892600)    0.0000                  
+(X_U1.N892466)     .1602              (X_U1.N892600)    0.0000                  
 
 (X_U1.N893364)    5.0000              (X_U1.N893591)    0.0000                  
 
@@ -603,7 +567,7 @@ R_R5         N29345 N69686  20 TC=0,0
 
 (X_U1.X_U5.N903216)    1.3750         (X_U1.X_U5.N903460)    1.3750             
 
-(X_U1.X_U5.N903474)    1.0244         (X_U1.X_U5.N903506)    1.0244             
+(X_U1.X_U5.N903474)    1.0240         (X_U1.X_U5.N903506)    1.0240             
 
 (X_U1.X_U5.N903742)    1.3750         (X_U1.X_U5.N903930)    1.0250             
 
@@ -653,17 +617,18 @@ R_R5         N29345 N69686  20 TC=0,0
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V1        -1.767E-02
+    V_V1        -1.350E-02
     V_V2         0.000E+00
-    V_V3        -3.906E-03
+    V_V3        -6.467E-03
     V_V4        -1.000E-06
     V_V10        0.000E+00
-    V_V12       -2.772E-11
+    V_V12       -6.000E-03
     V_V13        0.000E+00
+    V_V14       -1.023E-08
     X_U1.V_V8    0.000E+00
     X_U1.V_VOS   0.000E+00
     X_U2.V7     -1.000E-06
-    X_U2.V5     -1.000E-06
+    X_U2.V5     -1.026E-06
     X_U3.V152    4.561E-05
     X_U3.V154    1.200E-09
     X_U3.V20     0.000E+00
@@ -694,8 +659,8 @@ R_R5         N29345 N69686  20 TC=0,0
     X_U1.X_U19.V_VCMPP   0.000E+00
     X_U1.X_U9.V_VLATCH   0.000E+00
     X_U1.X_U5.V_VLOGIC   0.000E+00
-    X_U1.X_U5.V_V17  -5.614E-04
-    X_U1.X_U5.V_V18  -5.614E-04
+    X_U1.X_U5.V_V17  -9.551E-04
+    X_U1.X_U5.V_V18  -9.551E-04
     X_U1.X_U5.V_V14  -1.375E-08
     X_U1.X_U5.V_V16  -1.375E-08
     X_U1.X_U7.V_VS_MAX_SET   0.000E+00
@@ -703,12 +668,13 @@ R_R5         N29345 N69686  20 TC=0,0
     X_U1.X_U7.V_VS_MIN_SET1   0.000E+00
     X_U1.X_U7.V_VS_MIN_SET   0.000E+00
 
-    TOTAL POWER DISSIPATION   3.58E-02  WATTS
+    TOTAL POWER DISSIPATION   8.84E-02  WATTS
 
 
-          JOB ABORTED
+
+          JOB CONCLUDED
 
-**** 03/01/25 22:13:24 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+**** 03/03/25 18:28:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
 
  ** Profile: "SCHEMATIC1-sim_test"  [ C:\Users\15062\Desktop\design\test-pspicefiles\schematic1\sim_test.sim ] 
 
@@ -720,5 +686,5 @@ R_R5         N29345 N69686  20 TC=0,0
 
 
 
-  Total job time (using Solver 1)   =       57.98
+  Total job time (using Solver 1)   =        6.13
 
