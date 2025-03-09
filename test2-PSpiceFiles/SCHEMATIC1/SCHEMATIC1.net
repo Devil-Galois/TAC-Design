@@ -1,0 +1,8 @@
+* source TEST2
+X_D1         0 N00127 BAT14-03w/INF
+I_I1         N00127 N00154 DC 100mAdc  
+V_V3         N00154 0 -5Vdc
+V_V4         N00784 0  
++PULSE 5 3.3 100n 1n 1n 100n 300n
+V_V5         N01384 0 5Vdc
+X_Q1         N00127 N00784 N01384 BFQ256/PLP

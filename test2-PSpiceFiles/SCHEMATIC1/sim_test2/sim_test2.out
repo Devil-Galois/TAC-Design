@@ -1,0 +1,197 @@
+
+**** 03/04/25 17:22:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_test2"  [ C:\Users\15062\Desktop\design\test2-pspicefiles\schematic1\sim_test2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "sim_test2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Spb_data\cdssetup\OrCAD_PSpice\22.1.0\PSpice.ini file:
+.lib "C:\Users\15062\Desktop\design\model\OPA656\OPA656.LIB" 
+.lib "C:\Users\15062\Desktop\design\model\OPA333\OPAx333.LIB" 
+.lib "C:\Users\15062\Desktop\design\model\OPA2735\OPAx735.LIB" 
+.lib "C:\Users\15062\Desktop\design\model\OPAx180\OPAx180.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\CSD18532Q5\CSD18532Q5B.lib" 
+.lib "C:\Users\15062\Desktop\design\model\CSD18540Q5B\CSD18540Q5B.lib" 
+.lib "C:\Users\15062\Desktop\design\model\LM358-TI\lmx58_lm2904.lib" 
+.lib "C:\Users\15062\Desktop\design\model\UCC27323\UCC3895_PSPICE_TRANS\ucc3895.lib" 
+.lib "C:\Users\15062\Desktop\design\model\TLV3605\tlv3605.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\OPA388\OPAx388.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\LMP7721\LMP7721.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5045\REF5045.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\ADG1236\adg1236.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\THS3491\ths3491.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD25404Q3\CSD25404Q3.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\CSD17573Q5B\CSD17573Q5B.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\TLV3603\tlv3603.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\design_hold_circuit\REF5050\REF5050.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5010_PSPICE_AIO\REF5010.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\sbomao2c\OPAx188.LIB" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\slpm140b\CSD17577Q5A.lib" 
+.lib "D:\Cadence\SPB_22.1\tools\capture\library\pspice\REF5025_PSPICE_AIO\REF5025.LIB" 
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 200n 0 
+.OPTIONS ADVCONV
+.OPTIONS ITL1= 1000
+.OPTIONS ITL2= 200
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TEST2
+X_D1         0 N00127 BAT14-03w/INF
+I_I1         N00127 N00154 DC 100mAdc  
+V_V3         N00154 0 -5Vdc
+V_V4         N00784 0  
++PULSE 5 3.3 100n 1n 1n 100n 300n
+V_V5         N01384 0 5Vdc
+X_Q1         N00127 N00784 N01384 BFQ256/PLP
+
+**** RESUMING sim_test2.cir ****
+.END
+
+**** 03/04/25 17:22:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_test2"  [ C:\Users\15062\Desktop\design\test2-pspicefiles\schematic1\sim_test2.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_D1.D1         
+          IS   45.266500E-12 
+           N    1.082        
+          BV    7.2          
+         IBV    1.000000E-06 
+          RS    4.9          
+          TT    3.000000E-12 
+         CJO  161.710000E-15 
+          VJ     .224        
+           M     .1397       
+          EG     .73         
+         XTI    2.5          
+
+
+**** 03/04/25 17:22:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_test2"  [ C:\Users\15062\Desktop\design\test2-pspicefiles\schematic1\sim_test2.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_Q1.BFQ254     
+               PNP             
+       LEVEL    1            
+          IS    2.399980E-15 
+          BF   32.8282       
+          NF     .997204     
+         VAF  107.842        
+         IKF     .969923     
+         ISE   46.216800E-15 
+          NE    1.47255      
+          BR    1            
+          NR    1            
+         VAR    3            
+         ISS    0            
+          RB    5            
+         RBM    5            
+         IRB    1.000000E-06 
+          RE     .958788     
+          RC   10            
+         CJE   12.157200E-12 
+         VJE     .6          
+         MJE     .291315     
+         CJC    5.000990E-12 
+         VJC     .391551     
+         MJC     .346413     
+        XCJC     .21         
+         CJS    2.000000E-12 
+         VJS     .75         
+          TF  115.000000E-12 
+         XTF  100            
+         VTF    2            
+         ITF     .35         
+          KF    0            
+          AF    1            
+          CN    2.2          
+           D     .52         
+
+
+**** 03/04/25 17:22:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_test2"  [ C:\Users\15062\Desktop\design\test2-pspicefiles\schematic1\sim_test2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00127)   -1.0921 (N00154)   -5.0000 (N00784)    5.0000 (N01384)    5.0000     
+
+(X_D1.1) 222.0E-18 (X_D1.2)   -1.0921 (X_Q1.4)    5.0000 (X_Q1.5)    5.0000     
+
+(X_Q1.6)   -1.0921 (X_Q1.7)    5.0000 (X_Q1.8)    5.0000 (X_D1.10) 222.0E-18    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3         1.000E-01
+    V_V4        -6.095E-12
+    V_V5        -6.438E-12
+
+    TOTAL POWER DISSIPATION   5.00E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/04/25 17:22:17 **** PSpice 22.1.0 (15 January 2024) *** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-sim_test2"  [ C:\Users\15062\Desktop\design\test2-pspicefiles\schematic1\sim_test2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .59
+

@@ -1,6 +1,6 @@
 (ExpressProject "test"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[03/01/25]")
+  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[03/04/25]")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library")
@@ -34,6 +34,23 @@
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (Folder "Logs")
   (PartMRUSelector
+    (BFG425W/PLP
+      (FullPartName "BFG425W/PLP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (NE325S01/CEL
+      (FullPartName "NE325S01/CEL.Normal")
+      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\CEL.OLB")
+      (DeviceIndex "0"))
     (OPA656
       (FullPartName "OPA656.Normal")
       (LibraryName "C:\USERS\15062\DESKTOP\DESIGN\MODEL\OPA656\OPA656.OLB")
@@ -42,11 +59,6 @@
       (FullPartName "VDC.Normal")
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (R
-      (FullPartName "R.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
     (IPULSE
       (FullPartName "IPULSE.Normal")
@@ -87,11 +99,6 @@
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SBOMAO2C\OPAX188.OLB")
       (DeviceIndex "0"))
-    (BFG425W/PLP
-      (FullPartName "BFG425W/PLP.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
-      (DeviceIndex "0"))
     (BF258
       (FullPartName "BF258.Normal")
       (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\TRANSISTOR.OLB")
@@ -118,9 +125,6 @@
       (LibraryName
          "C:\USERS\15062\DESKTOP\DESIGN\MODEL\CSD18540Q5B\CSD18540Q5B.OLB")
       (DeviceIndex "0"))
-    (0
-      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
     (VPULSE
       (FullPartName "VPULSE.Normal")
       (LibraryName
@@ -143,11 +147,6 @@
     (SW_T_SPDT
       (FullPartName "SW_T_SPDT.Normal")
       (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
-      (DeviceIndex "0"))
-    (S
-      (FullPartName "S.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0")))
   (GlobalState
     (FileView
@@ -157,7 +156,9 @@
          "SCHEMATIC1")
       (Path "Design Resources" "C:\Users\15062\Desktop\design\test.dsn"
          "Design Cache")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources" "C:\Users\15062\Desktop\design\test.dsn"
+         "SCHEMATIC1" "PAGE1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -167,12 +168,13 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 28 5 1004 28 701")
-        (Scroll "-5 -15")
-        (Zoom "63")
+        (Placement "44 0 1 -1 -1 -1 -1 5 1290 28 701")
+        (Scroll "267 0")
+        (Zoom "100")
         (Occurrence "/"))
       (Path "C:\USERS\15062\DESKTOP\DESIGN\TEST.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE1")))
   (MPSSessionName "15062")
-  (LastUsedLibraryBrowseDirectory "C:\Users\15062\Desktop\design\model\OPA656"))
+  (LastUsedLibraryBrowseDirectory
+     "D:\Cadence\SPB_22.1\tools\capture\library\pspice"))
