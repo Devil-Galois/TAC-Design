@@ -1,6 +1,6 @@
 (ExpressProject "test"
   (ProjectVersion "19981106")
-  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[03/04/25]")
+  (SoftwareVersion "22.1 S008 (4165805)  [1/15/2024]-[03/15/25]")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library")
@@ -34,18 +34,28 @@
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (Folder "Logs")
   (PartMRUSelector
-    (BFG425W/PLP
-      (FullPartName "BFG425W/PLP.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
-      (DeviceIndex "0"))
     (0
       (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (BFQ149/PLP
+      (FullPartName "BFQ149/PLP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
       (DeviceIndex "0"))
     (R
       (FullPartName "R.Normal")
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (BFG425W/PLP
+      (FullPartName "BFG425W/PLP.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\PHIL_RF.OLB")
       (DeviceIndex "0"))
     (NE325S01/CEL
       (FullPartName "NE325S01/CEL.Normal")
@@ -62,11 +72,6 @@
       (DeviceIndex "0"))
     (IPULSE
       (FullPartName "IPULSE.Normal")
-      (LibraryName
-         "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
-      (DeviceIndex "0"))
-    (IDC
-      (FullPartName "IDC.Normal")
       (LibraryName
          "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0"))
@@ -143,10 +148,6 @@
     (SW_PB_SPST
       (FullPartName "SW_PB_SPST.Normal")
       (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
-      (DeviceIndex "0"))
-    (SW_T_SPDT
-      (FullPartName "SW_T_SPDT.Normal")
-      (LibraryName "D:\CADENCE\SPB_22.1\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
       (DeviceIndex "0")))
   (GlobalState
     (FileView
@@ -156,21 +157,19 @@
          "SCHEMATIC1")
       (Path "Design Resources" "C:\Users\15062\Desktop\design\test.dsn"
          "Design Cache")
-      (Path "Outputs")
-      (Select "Design Resources" "C:\Users\15062\Desktop\design\test.dsn"
-         "SCHEMATIC1" "PAGE1"))
+      (Path "Outputs"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 655"))
+        (Placement "44 0 1 -1 -1 -1 -1 0 200 0 679"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -1 -1 5 1290 28 701")
-        (Scroll "267 0")
-        (Zoom "100")
+        (Scroll "-132 -5")
+        (Zoom "65")
         (Occurrence "/"))
       (Path "C:\USERS\15062\DESKTOP\DESIGN\TEST.DSN")
       (Schematic "SCHEMATIC1")
